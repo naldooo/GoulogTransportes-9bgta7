@@ -309,19 +309,19 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div class="reveal">
-            <div class="stat-number text-5xl md:text-6xl text-white" data-target="20">0+</div>
+            <div class="stat-number text-5xl md:text-6xl text-white" data-target="20" data-suffix="+">0</div>
             <p class="text-white/80 text-sm font-semibold uppercase tracking-wide mt-1">Anos de História</p>
           </div>
           <div class="reveal" style="transition-delay:0.1s">
-            <div class="stat-number text-5xl md:text-6xl text-white" data-target="50">0+</div>
+            <div class="stat-number text-5xl md:text-6xl text-white" data-target="50" data-suffix="+">0</div>
             <p class="text-white/80 text-sm font-semibold uppercase tracking-wide mt-1">Conjuntos Próprios</p>
           </div>
           <div class="reveal" style="transition-delay:0.2s">
-            <div class="stat-number text-5xl md:text-6xl text-white" data-target="15">0k+</div>
+            <div class="stat-number text-5xl md:text-6xl text-white" data-target="15" data-suffix="k+">0</div>
             <p class="text-white/80 text-sm font-semibold uppercase tracking-wide mt-1">Fretes Realizados</p>
           </div>
           <div class="reveal" style="transition-delay:0.3s">
-            <div class="stat-number text-5xl md:text-6xl text-white" data-target="872">0k+</div>
+            <div class="stat-number text-5xl md:text-6xl text-white" data-target="872" data-suffix="k+">0</div>
             <p class="text-white/80 text-sm font-semibold uppercase tracking-wide mt-1">Toneladas Transportadas</p>
           </div>
         </div>
@@ -1447,31 +1447,63 @@
       initReveal();
 
       // ==================== COUNTER ANIMATION ====================
-      function animateCounters() {
-        const stats = document.querySelectorAll('.stat-number[data-target]');
-        stats.forEach(stat => {
-          const target = parseInt(stat.getAttribute('data-target'));
-          const suffix = stat.textContent.replace(/\d+/, '');
-          let current = 0;
-          const increment = target / 60;
-          const timer = setInterval(() => {
-            current = Math.min(current + increment, target);
-            stat.textContent = Math.floor(current) + suffix;
-            if (current >= target) clearInterval(timer);
-          }, 25);
-        });
+      let countersTriggered = false;
+
+      function easeOutExpo(t) {
+        return t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
       }
 
-      // Trigger counters on stats section
-      const statsSection = document.querySelector('.bg-goulog-red .stat-number');
-      if (statsSection) {
+      function animateSingleCounter(stat, delay) {
+        const target = parseInt(stat.getAttribute('data-target'));
+        const suffix = stat.getAttribute('data-suffix') || '+';
+        const duration = 1800;
+        let startTime = null;
+
+        // Reset
+        stat.textContent = '0';
+        stat.style.opacity = '0';
+        stat.style.transform = 'translateY(12px)';
+        stat.style.transition = `opacity 0.4s ease ${delay}ms, transform 0.4s ease ${delay}ms`;
+
+        setTimeout(() => {
+          stat.style.opacity = '1';
+          stat.style.transform = 'translateY(0)';
+        }, delay + 50);
+
+        function tick(timestamp) {
+          if (!startTime) startTime = timestamp;
+          const elapsed = timestamp - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const eased = easeOutExpo(progress);
+          const current = Math.floor(eased * target);
+          stat.textContent = current + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(tick);
+          } else {
+            stat.textContent = target + suffix;
+          }
+        }
+
+        setTimeout(() => requestAnimationFrame(tick), delay);
+      }
+
+      function animateCounters() {
+        if (countersTriggered) return;
+        countersTriggered = true;
+        const stats = document.querySelectorAll('.stat-number[data-target]');
+        stats.forEach((stat, i) => animateSingleCounter(stat, i * 150));
+      }
+
+      // Trigger counters when the stats section enters viewport
+      const statsContainer = document.querySelector('.bg-goulog-red');
+      if (statsContainer) {
         const counterObserver = new IntersectionObserver((entries) => {
           if (entries[0].isIntersecting) {
             animateCounters();
             counterObserver.disconnect();
           }
-        }, { threshold: 0.5 });
-        counterObserver.observe(statsSection.closest('section') || statsSection.parentElement);
+        }, { threshold: 0.35 });
+        counterObserver.observe(statsContainer);
       }
 
       // ==================== CONTACT FORM ====================
