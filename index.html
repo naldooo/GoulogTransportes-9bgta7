@@ -1,0 +1,1355 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GOULOG Transportes - Especialistas em Cargas Químicas e Perigosas</title>
+  <meta name="description" content="Especialistas em transporte de produtos químicos perigosos, a granel e carga seca. Mais de 20 anos conectando caminhos e entregando confiança."/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GOULOG Transportes - Especialistas em Cargas Químicas e Perigosas"/>
+  <meta property="og:description" content="Especialistas em transporte de produtos químicos perigosos, a granel e carga seca. Frota 100% rastreada, qualificados pelo SASSMAQ."/>
+  <meta property="og:url" content="https://goulog-transportes.onspace.app"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="GOULOG Transportes"/>
+  <meta property="og:image" content="https://cdn-ai.onspace.ai/onspace/project/screenshot/online/pre-site/9bgta7.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="GOULOG Transportes - Especialistas em Cargas Químicas e Perigosas"/>
+  <meta name="twitter:description" content="Especialistas em transporte de produtos químicos perigosos, a granel e carga seca. Frota 100% rastreada, qualificados pelo SASSMAQ."/>
+  <meta name="twitter:image" content="https://cdn-ai.onspace.ai/onspace/project/screenshot/online/pre-site/9bgta7.jpg"/>
+  <meta name="twitter:url" content="https://goulog-transportes.onspace.app"/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&amp;family=Barlow+Condensed:wght@600;700;800;900&amp;display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            goulog: {
+              red: '#D72323',
+              'red-dark': '#B01B1B',
+              'red-light': '#FF3333',
+              dark: '#0D0D0D',
+              'dark-2': '#141414',
+              'dark-3': '#1C1C1C',
+              'dark-4': '#252525',
+              gray: '#6B7280',
+              'gray-light': '#9CA3AF',
+            }
+          },
+          fontFamily: {
+            barlow: ['Barlow', 'sans-serif'],
+            'barlow-condensed': ['Barlow Condensed', 'sans-serif'],
+          },
+          animation: {
+            'fade-up': 'fadeUp 0.7s ease forwards',
+            'fade-in': 'fadeIn 0.6s ease forwards',
+            'slide-right': 'slideRight 0.7s ease forwards',
+            'counter': 'counter 2s ease forwards',
+            'truck-move': 'truckMove 20s linear infinite',
+          },
+          keyframes: {
+            fadeUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideRight: {
+              '0%': { opacity: '0', transform: 'translateX(-30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            truckMove: {
+              '0%': { transform: 'translateX(-5%) scale(1.02)' },
+              '50%': { transform: 'translateX(2%) scale(1)' },
+              '100%': { transform: 'translateX(-5%) scale(1.02)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Barlow', sans-serif; background-color: #0D0D0D; color: #fff; overflow-x: hidden; scroll-behavior: smooth; }
+    .font-condensed { font-family: 'Barlow Condensed', sans-serif; }
+
+    /* Page system */
+    .page { display: none; }
+    .page.active { display: block; }
+
+    /* Watermark truck hero */
+    .hero-watermark {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://cdn-ai.onspace.ai/onspace/project/uploads/eQMvnYBDNEd7MKKnRq9Pa7/Carta_de_apresentação_GOULOG_(1)_(1)_(1)_(1)_(1)_p2_0.jpeg');
+      background-size: cover;
+      background-position: center 30%;
+      opacity: 0.12;
+      animation: truckMove 20s ease-in-out infinite;
+    }
+    .hero-watermark::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(13,13,13,0.3) 0%, rgba(13,13,13,0.6) 60%, rgba(13,13,13,1) 100%);
+    }
+
+    /* Red glow */
+    .red-glow { box-shadow: 0 0 40px rgba(215,35,35,0.3); }
+    .red-glow-text { text-shadow: 0 0 30px rgba(215,35,35,0.5); }
+
+    /* Navbar */
+    .nav-link { position: relative; transition: color 0.3s; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #D72323; transition: width 0.3s; }
+    .nav-link:hover::after, .nav-link.active-nav::after { width: 100%; }
+    .nav-link.active-nav { color: #D72323; }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.revealed { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-left.revealed { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-right.revealed { opacity: 1; transform: translateX(0); }
+
+    /* Gradient border card */
+    .grad-border { position: relative; border-radius: 12px; background: #1C1C1C; }
+    .grad-border::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #D72323, #4a0000, transparent);
+      z-index: -1;
+    }
+
+    /* Stats counter */
+    .stat-number { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; color: #D72323; }
+
+    /* Service card hover */
+    .service-card { transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; }
+    .service-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(215,35,35,0.2); }
+
+    /* WhatsApp float */
+    .whatsapp-float { position: fixed; bottom: 24px; right: 24px; z-index: 9999; }
+    .whatsapp-float a {
+      display: flex; align-items: center; justify-content: center;
+      width: 60px; height: 60px; border-radius: 50%;
+      background: #25D366; color: white; font-size: 28px;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+    }
+    .whatsapp-float a:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.7); }
+
+    /* Mobile menu */
+    #mobile-menu { transition: max-height 0.4s ease, opacity 0.3s ease; max-height: 0; opacity: 0; overflow: hidden; }
+    #mobile-menu.open { max-height: 400px; opacity: 1; }
+
+    /* Hero red line */
+    .red-line { width: 60px; height: 4px; background: #D72323; border-radius: 2px; }
+
+    /* Timeline */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -1px;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #D72323;
+      border: 3px solid #0D0D0D;
+      box-shadow: 0 0 0 2px #D72323;
+    }
+
+    /* Client logos filter */
+    .client-logo { filter: brightness(0) invert(0.7); transition: filter 0.3s; }
+    .client-logo:hover { filter: brightness(0) invert(1); }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0D0D0D; }
+    ::-webkit-scrollbar-thumb { background: #D72323; border-radius: 3px; }
+
+    /* Tab active */
+    .tab-btn.active { background: #D72323; color: white; }
+
+    /* Form focus */
+    .form-input:focus { outline: none; border-color: #D72323; box-shadow: 0 0 0 2px rgba(215,35,35,0.2); }
+
+    /* Navbar scroll */
+    #navbar { transition: background 0.3s, box-shadow 0.3s; }
+    #navbar.scrolled { background: rgba(13,13,13,0.98); box-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+
+    @keyframes pulse-red {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(215,35,35,0.4); }
+      50% { box-shadow: 0 0 0 12px rgba(215,35,35,0); }
+    }
+    .pulse-red { animation: pulse-red 2s infinite; }
+
+    @keyframes truckMove {
+      0% { transform: translateX(-3%) scale(1.03); }
+      50% { transform: translateX(1%) scale(1); }
+      100% { transform: translateX(-3%) scale(1.03); }
+    }
+  </style>
+</head>
+<body class="bg-goulog-dark text-white font-barlow">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <button onclick="showPage(&#39;home&#39;)" class="flex items-center gap-3 focus:outline-none">
+          <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG Transportes Logo" class="h-10 md:h-12 w-auto"/>
+        </button>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <button onclick="showPage(&#39;home&#39;)" class="nav-link active-nav text-sm font-semibold tracking-wide uppercase text-gray-200 hover:text-white transition-colors" id="nav-home">Início</button>
+          <button onclick="showPage(&#39;servicos&#39;)" class="nav-link text-sm font-semibold tracking-wide uppercase text-gray-200 hover:text-white transition-colors" id="nav-servicos">Serviços</button>
+          <button onclick="showPage(&#39;contato&#39;)" class="nav-link text-sm font-semibold tracking-wide uppercase text-gray-200 hover:text-white transition-colors" id="nav-contato">Contato</button>
+          <a href="https://api.whatsapp.com/send?phone=5513988888888&amp;text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação" target="_blank" class="bg-goulog-red hover:bg-goulog-red-dark text-white text-sm font-bold px-5 py-2.5 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-red-900/30 uppercase tracking-wide pulse-red">
+            Solicitar Cotação
+          </a>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button id="hamburger" class="md:hidden text-white p-2 focus:outline-none" aria-label="Menu">
+          <div class="space-y-1.5" id="ham-icon">
+            <span class="block w-6 h-0.5 bg-white transition-all"></span>
+            <span class="block w-6 h-0.5 bg-white transition-all"></span>
+            <span class="block w-4 h-0.5 bg-white transition-all"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden bg-goulog-dark-2 border-t border-gray-800">
+      <div class="px-4 py-4 space-y-3">
+        <button onclick="showPage(&#39;home&#39;); closeMobile()" class="block w-full text-left text-sm font-semibold tracking-wide uppercase text-gray-200 py-2 hover:text-goulog-red transition-colors">Início</button>
+        <button onclick="showPage(&#39;servicos&#39;); closeMobile()" class="block w-full text-left text-sm font-semibold tracking-wide uppercase text-gray-200 py-2 hover:text-goulog-red transition-colors">Serviços</button>
+        <button onclick="showPage(&#39;contato&#39;); closeMobile()" class="block w-full text-left text-sm font-semibold tracking-wide uppercase text-gray-200 py-2 hover:text-goulog-red transition-colors">Contato</button>
+        <a href="https://api.whatsapp.com/send?phone=5513988888888&amp;text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação" target="_blank" class="block bg-goulog-red text-white text-sm font-bold px-4 py-3 rounded-lg text-center uppercase tracking-wide mt-2">Solicitar Cotação</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== PAGE: HOME ===== -->
+  <div id="page-home" class="page active">
+
+    <!-- HERO -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-goulog-dark">
+      <!-- Watermark truck background -->
+      <div class="hero-watermark"></div>
+      <!-- Red gradient overlay left -->
+      <div class="absolute inset-0 bg-gradient-to-r from-goulog-red/10 via-transparent to-transparent pointer-events-none z-10"></div>
+      <!-- Logo watermark overlay -->
+      <div class="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+        <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="" aria-hidden="true" class="w-[70vw] max-w-2xl opacity-[0.04]"/>
+      </div>
+
+      <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-3xl">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="red-line"></div>
+            <span class="text-goulog-red text-sm font-bold tracking-[0.2em] uppercase">Especialistas em Logística</span>
+          </div>
+          <h1 class="font-condensed font-900 text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none uppercase mb-6 red-glow-text">
+            Conectando<br/>
+            <span class="text-goulog-red">Caminhos,</span><br/>
+            Entregando<br/>Confiança
+          </h1>
+          <p class="text-gray-300 text-lg md:text-xl leading-relaxed mb-8 max-w-xl">
+            Mais do que transportar cargas, transportamos confiança e soluções. Especialistas em transporte de produtos químicos perigosos, a granel e carga seca há mais de 20 anos.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="https://api.whatsapp.com/send?phone=5513988888888&amp;text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação" target="_blank" class="inline-flex items-center justify-center gap-2 bg-goulog-red hover:bg-goulog-red-dark text-white font-bold px-8 py-4 rounded-lg text-base uppercase tracking-wide transition-all duration-300 hover:shadow-xl hover:shadow-red-900/40 group">
+              <i class="fa-brands fa-whatsapp text-xl group-hover:scale-110 transition-transform"></i>
+              Solicitar Cotação
+            </a>
+            <button onclick="showPage(&#39;servicos&#39;)" class="inline-flex items-center justify-center gap-2 border border-white/20 hover:border-goulog-red text-white hover:text-goulog-red font-bold px-8 py-4 rounded-lg text-base uppercase tracking-wide transition-all duration-300 backdrop-blur-sm">
+              <i class="fa-solid fa-arrow-right"></i>
+              Nossos Serviços
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 opacity-60 animate-bounce">
+        <span class="text-xs text-gray-400 uppercase tracking-widest">Role</span>
+        <i class="fa-solid fa-chevron-down text-goulog-red"></i>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="bg-goulog-red py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="reveal">
+            <div class="stat-number text-5xl md:text-6xl text-white" data-target="20">0+</div>
+            <p class="text-white/80 text-sm font-semibold uppercase tracking-wide mt-1">Anos de História</p>
+          </div>
+          <div class="reveal" style="transition-delay:0.1s">
+            <div class="stat-number text-5xl md:text-6xl text-white" data-target="50">0+</div>
+            <p class="text-white/80 text-sm font-semibold uppercase tracking-wide mt-1">Conjuntos Próprios</p>
+          </div>
+          <div class="reveal" style="transition-delay:0.2s">
+            <div class="stat-number text-5xl md:text-6xl text-white" data-target="15">0k+</div>
+            <p class="text-white/80 text-sm font-semibold uppercase tracking-wide mt-1">Fretes Realizados</p>
+          </div>
+          <div class="reveal" style="transition-delay:0.3s">
+            <div class="stat-number text-5xl md:text-6xl text-white" data-target="872">0k+</div>
+            <p class="text-white/80 text-sm font-semibold uppercase tracking-wide mt-1">Toneladas Transportadas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUEM SOMOS -->
+    <section class="py-20 md:py-28 bg-goulog-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div class="reveal-left">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="red-line"></div>
+              <span class="text-goulog-red text-sm font-bold tracking-[0.2em] uppercase">Quem Somos</span>
+            </div>
+            <h2 class="font-condensed font-800 text-4xl md:text-5xl uppercase leading-tight mb-6">
+              Mais de <span class="text-goulog-red">20 Anos</span><br/>Movendo o Brasil
+            </h2>
+            <p class="text-gray-300 text-base leading-relaxed mb-5">
+              Com sede própria em <strong class="text-white">Jacupiranga – SP</strong>, estrategicamente localizada na Rodovia Regis Bittencourt, a GOULOG possui uma infraestrutura de <strong class="text-white">10.000 m²</strong> completa para suprir todas as necessidades de movimentação de cargas.
+            </p>
+            <p class="text-gray-300 text-base leading-relaxed mb-8">
+              Há mais de 20 anos no mercado (fundada em 2003), atuamos em todo o território nacional com o compromisso de segurança, pontualidade e parceria.
+            </p>
+            <div class="space-y-3 mb-8">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-circle-check text-goulog-red"></i>
+                <span class="text-gray-200">Qualificada pelo <strong class="text-white">SASSMAQ</strong></span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-circle-check text-goulog-red"></i>
+                <span class="text-gray-200">Frota <strong class="text-white">100% rastreada</strong> em tempo real</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-circle-check text-goulog-red"></i>
+                <span class="text-gray-200">Equipe <strong class="text-white">altamente capacitada</strong> e especializada</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-circle-check text-goulog-red"></i>
+                <span class="text-gray-200">Foco em <strong class="text-white">eficiência e renovação</strong> constante da frota</span>
+              </div>
+            </div>
+            <button onclick="showPage(&#39;servicos&#39;)" class="inline-flex items-center gap-2 bg-goulog-red hover:bg-goulog-red-dark text-white font-bold px-6 py-3 rounded-lg transition-all duration-300 uppercase tracking-wide">
+              Conheça Nossos Serviços <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+          <div class="reveal-right relative">
+            <div class="relative rounded-2xl overflow-hidden red-glow">
+              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/euccJGxfQJgMWhyvQjwCqp/ChatGPT_Image_4_de_abr._de_2026,_01_50_21.png" alt="Frota GOULOG - Caminhão com a marca GOULOG" class="w-full h-72 md:h-96 object-cover" loading="lazy"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/80 via-transparent to-transparent"></div>
+              <!-- SASSMAQ badge -->
+              <div class="absolute bottom-4 left-4 bg-goulog-dark/90 backdrop-blur border border-goulog-red/30 rounded-xl px-4 py-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-full bg-goulog-red flex items-center justify-center">
+                    <i class="fa-solid fa-shield-halved text-white text-lg"></i>
+                  </div>
+                  <div>
+                    <div class="text-white font-bold text-sm">Certificação SASSMAQ</div>
+                    <div class="text-gray-400 text-xs">Segurança &amp; Qualidade</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Floating stat card -->
+            <div class="absolute -top-6 -right-4 bg-goulog-red rounded-xl px-5 py-4 shadow-2xl hidden md:block">
+              <div class="font-condensed font-800 text-3xl text-white">2003</div>
+              <div class="text-white/80 text-xs font-semibold uppercase">Fundação</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOSSA FROTA -->
+    <section class="py-20 md:py-28 bg-goulog-dark-2">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal">
+          <div class="flex items-center justify-center gap-3 mb-5">
+            <div class="red-line"></div>
+            <span class="text-goulog-red text-sm font-bold tracking-[0.2em] uppercase">Nossa Frota</span>
+            <div class="red-line"></div>
+          </div>
+          <h2 class="font-condensed font-800 text-4xl md:text-5xl uppercase leading-tight">
+            Frota Moderna e <span class="text-goulog-red">Preparada</span>
+          </h2>
+          <p class="text-gray-400 text-base mt-4 max-w-xl mx-auto">Veículos de última geração, 100% rastreados e prontos para atender com segurança e eficiência.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Image 1 - Main Hero Truck -->
+          <div class="md:col-span-2 reveal-left">
+            <div class="relative rounded-2xl overflow-hidden h-72 md:h-80 group">
+              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/eQMvnYBDNEd7MKKnRq9Pa7/Carta_de_apresentação_GOULOG_(1)_(1)_(1)_(1)_(1)_p2_0.jpeg" alt="Frota de caminhões brancos GOULOG enfileirados" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark via-transparent to-transparent"></div>
+              <div class="absolute bottom-4 left-4">
+                <span class="bg-goulog-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">50+ Conjuntos Próprios</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-6 reveal-right">
+            <div class="relative rounded-2xl overflow-hidden h-32 md:h-36 group">
+              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/DqFoBWCR9pW4dK7WTwEHuh/Modelo_4_-_Logotipo_-_GOULOG_p4_0.png" alt="Caminhão tanque GOULOG para cargas químicas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/70 to-transparent"></div>
+              <div class="absolute bottom-3 left-3">
+                <span class="text-white text-xs font-bold">Transporte a Granel</span>
+              </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden h-32 md:h-36 group">
+              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/euccJGxfQJgMWhyvQjwCqp/ChatGPT_Image_4_de_abr._de_2026,_01_50_21.png" alt="Caminhão tanque com logo GOULOG vista frontal e traseira" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
+              <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/70 to-transparent"></div>
+              <div class="absolute bottom-3 left-3">
+                <span class="text-white text-xs font-bold">Frota Identificada</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS PREVIEW -->
+    <section class="py-20 md:py-28 bg-goulog-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal">
+          <div class="flex items-center justify-center gap-3 mb-5">
+            <div class="red-line"></div>
+            <span class="text-goulog-red text-sm font-bold tracking-[0.2em] uppercase">O que fazemos</span>
+            <div class="red-line"></div>
+          </div>
+          <h2 class="font-condensed font-800 text-4xl md:text-5xl uppercase leading-tight">
+            Nossos <span class="text-goulog-red">Serviços</span>
+          </h2>
+          <p class="text-gray-400 text-base mt-4 max-w-xl mx-auto">Soluções completas em logística rodoviária para atender às necessidades específicas do seu negócio.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="service-card grad-border p-6 reveal" style="transition-delay:0s">
+            <div class="w-14 h-14 rounded-xl bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center mb-5">
+              <i class="fa-solid fa-flask text-goulog-red text-2xl"></i>
+            </div>
+            <h3 class="font-condensed font-700 text-xl uppercase mb-3 text-white">Cargas Químicas</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Transporte especializado de produtos químicos com veículos adequados e motoristas altamente capacitados e certificados.</p>
+            <div class="mt-5 pt-4 border-t border-gray-700">
+              <button onclick="showPage(&#39;servicos&#39;)" class="text-goulog-red text-sm font-bold hover:text-goulog-red-light transition-colors flex items-center gap-2">Saiba mais <i class="fa-solid fa-arrow-right text-xs"></i></button>
+            </div>
+          </div>
+
+          <div class="service-card grad-border p-6 reveal" style="transition-delay:0.1s">
+            <div class="w-14 h-14 rounded-xl bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center mb-5">
+              <i class="fa-solid fa-triangle-exclamation text-goulog-red text-2xl"></i>
+            </div>
+            <h3 class="font-condensed font-700 text-xl uppercase mb-3 text-white">Cargas Perigosas</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Rigoroso controle de segurança e conformidade com a legislação vigente para transporte de produtos perigosos em todo Brasil.</p>
+            <div class="mt-5 pt-4 border-t border-gray-700">
+              <button onclick="showPage(&#39;servicos&#39;)" class="text-goulog-red text-sm font-bold hover:text-goulog-red-light transition-colors flex items-center gap-2">Saiba mais <i class="fa-solid fa-arrow-right text-xs"></i></button>
+            </div>
+          </div>
+
+          <div class="service-card grad-border p-6 reveal" style="transition-delay:0.2s">
+            <div class="w-14 h-14 rounded-xl bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center mb-5">
+              <i class="fa-solid fa-truck-fast text-goulog-red text-2xl"></i>
+            </div>
+            <h3 class="font-condensed font-700 text-xl uppercase mb-3 text-white">Logística Rodoviária</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Planejamento de rotas, otimização de custos e prazos para cargas gerais em todo o território nacional com rastreamento em tempo real.</p>
+            <div class="mt-5 pt-4 border-t border-gray-700">
+              <button onclick="showPage(&#39;servicos&#39;)" class="text-goulog-red text-sm font-bold hover:text-goulog-red-light transition-colors flex items-center gap-2">Saiba mais <i class="fa-solid fa-arrow-right text-xs"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-10">
+          <button onclick="showPage(&#39;servicos&#39;)" class="inline-flex items-center gap-2 border border-goulog-red text-goulog-red hover:bg-goulog-red hover:text-white font-bold px-8 py-3 rounded-lg transition-all duration-300 uppercase tracking-wide">
+            Ver Todos os Serviços <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SASSMAQ / CERTIFICAÇÃO -->
+    <section class="py-20 md:py-28 bg-goulog-dark-2 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 40px, rgba(215,35,35,0.3) 40px, rgba(215,35,35,0.3) 41px), repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(215,35,35,0.3) 40px, rgba(215,35,35,0.3) 41px);"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="reveal-left">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="red-line"></div>
+              <span class="text-goulog-red text-sm font-bold tracking-[0.2em] uppercase">Certificação</span>
+            </div>
+            <h2 class="font-condensed font-800 text-4xl md:text-5xl uppercase leading-tight mb-6">
+              Qualificação <span class="text-goulog-red">SASSMAQ</span>
+            </h2>
+            <p class="text-gray-300 text-base leading-relaxed mb-6">
+              A Goulog é qualificada pelo <strong class="text-white">SASSMAQ (Sistema de Avaliação de Segurança, Saúde, Meio Ambiente e Qualidade)</strong>, atendendo todos os requisitos avaliados pelos órgãos certificadores.
+            </p>
+            <p class="text-gray-300 text-base leading-relaxed mb-8">
+              Isso garante que nossos processos seguem os mais rigorosos padrões de segurança e qualidade exigidos pela indústria química.
+            </p>
+            <div class="grid grid-cols-2 gap-4">
+              <div class="bg-goulog-dark rounded-xl p-4 border border-gray-700">
+                <i class="fa-solid fa-shield-halved text-goulog-red text-2xl mb-2"></i>
+                <div class="text-white font-semibold text-sm">Segurança</div>
+                <div class="text-gray-400 text-xs">Máxima proteção</div>
+              </div>
+              <div class="bg-goulog-dark rounded-xl p-4 border border-gray-700">
+                <i class="fa-solid fa-leaf text-goulog-red text-2xl mb-2"></i>
+                <div class="text-white font-semibold text-sm">Meio Ambiente</div>
+                <div class="text-gray-400 text-xs">Responsabilidade ambiental</div>
+              </div>
+              <div class="bg-goulog-dark rounded-xl p-4 border border-gray-700">
+                <i class="fa-solid fa-heart-pulse text-goulog-red text-2xl mb-2"></i>
+                <div class="text-white font-semibold text-sm">Saúde</div>
+                <div class="text-gray-400 text-xs">Cuidado com pessoas</div>
+              </div>
+              <div class="bg-goulog-dark rounded-xl p-4 border border-gray-700">
+                <i class="fa-solid fa-star text-goulog-red text-2xl mb-2"></i>
+                <div class="text-white font-semibold text-sm">Qualidade</div>
+                <div class="text-gray-400 text-xs">Excelência garantida</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal-right">
+            <div class="grad-border p-8 text-center">
+              <div class="w-24 h-24 rounded-full bg-goulog-red/10 border-2 border-goulog-red flex items-center justify-center mx-auto mb-6 red-glow">
+                <i class="fa-solid fa-certificate text-goulog-red text-4xl"></i>
+              </div>
+              <div class="font-condensed font-800 text-3xl text-goulog-red mb-2 uppercase">SASSMAQ</div>
+              <p class="text-gray-300 text-sm leading-relaxed">Sistema de Avaliação de Segurança, Saúde, Meio Ambiente e Qualidade</p>
+              <div class="border-t border-gray-700 mt-6 pt-6 space-y-3">
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-check text-goulog-red"></i>
+                  <span class="text-gray-300 text-sm">Auditorias periódicas realizadas</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-check text-goulog-red"></i>
+                  <span class="text-gray-300 text-sm">Conformidade com ABIQUIM</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-check text-goulog-red"></i>
+                  <span class="text-gray-300 text-sm">Processos documentados e rastreáveis</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <i class="fa-solid fa-check text-goulog-red"></i>
+                  <span class="text-gray-300 text-sm">Motoristas treinados e certificados</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TELEMETRIA -->
+    <section class="py-20 md:py-28 bg-goulog-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="reveal-right order-2 md:order-1">
+            <div class="relative bg-goulog-dark-3 rounded-2xl p-6 border border-gray-700 overflow-hidden">
+              <!-- Mock telemetry UI -->
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 rounded-full bg-green-400 animate-pulse"></div>
+                  <span class="text-xs text-gray-400 font-semibold">SISTEMA ATIVO · 24/7</span>
+                </div>
+                <span class="text-xs text-goulog-red font-bold">100% RASTREÁVEL</span>
+              </div>
+              <!-- Fake map -->
+              <div class="rounded-xl overflow-hidden mb-4 relative" style="height:180px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);">
+                <div class="absolute inset-0 opacity-20" style="background-image: url(&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2240%22&gt;&lt;path d=%22M0 20h40M20 0v40%22 stroke=%22white%22 stroke-width=%220.5%22/&gt;&lt;/svg&gt;&#39;);"></div>
+                <!-- Route line -->
+                <svg class="absolute inset-0 w-full h-full" viewBox="0 0 300 180">
+                  <path d="M30 150 Q80 80 150 90 Q200 95 270 30" stroke="#D72323" stroke-width="2" fill="none" stroke-dasharray="5,3"></path>
+                  <circle cx="30" cy="150" r="6" fill="#D72323" class="animate-pulse"></circle>
+                  <circle cx="270" cy="30" r="6" fill="#22C55E"></circle>
+                </svg>
+                <div class="absolute bottom-2 left-2 bg-black/60 rounded px-2 py-1">
+                  <span class="text-white text-xs font-mono">SP → BA · 1.285km</span>
+                </div>
+              </div>
+              <!-- Stats grid -->
+              <div class="grid grid-cols-3 gap-3">
+                <div class="bg-goulog-dark rounded-lg p-3 text-center">
+                  <div class="text-goulog-red font-bold text-lg font-mono">82km/h</div>
+                  <div class="text-gray-500 text-xs">Velocidade</div>
+                </div>
+                <div class="bg-goulog-dark rounded-lg p-3 text-center">
+                  <div class="text-green-400 font-bold text-lg font-mono">OK</div>
+                  <div class="text-gray-500 text-xs">Temperatura</div>
+                </div>
+                <div class="bg-goulog-dark rounded-lg p-3 text-center">
+                  <div class="text-blue-400 font-bold text-lg font-mono">4.2h</div>
+                  <div class="text-gray-500 text-xs">Estimativa</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal-left order-1 md:order-2">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="red-line"></div>
+              <span class="text-goulog-red text-sm font-bold tracking-[0.2em] uppercase">Tecnologia</span>
+            </div>
+            <h2 class="font-condensed font-800 text-4xl md:text-5xl uppercase leading-tight mb-6">
+              Sistema de <span class="text-goulog-red">Telemetria</span> Inteligente
+            </h2>
+            <p class="text-gray-300 text-base leading-relaxed mb-6">
+              Utilizamos tecnologia de ponta para garantir a segurança da sua carga e a eficiência do transporte. Nosso sistema de telemetria veicular permite o monitoramento em tempo real de toda a frota.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4 p-3 rounded-xl hover:bg-goulog-dark-2 transition-colors">
+                <div class="w-10 h-10 min-w-[2.5rem] rounded-lg bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center">
+                  <i class="fa-solid fa-satellite-dish text-goulog-red"></i>
+                </div>
+                <div>
+                  <div class="text-white font-semibold text-sm">Rastreamento 24h/7 dias</div>
+                  <div class="text-gray-400 text-xs mt-0.5">Monitoramento contínuo da frota em tempo real</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-3 rounded-xl hover:bg-goulog-dark-2 transition-colors">
+                <div class="w-10 h-10 min-w-[2.5rem] rounded-lg bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center">
+                  <i class="fa-solid fa-gauge-high text-goulog-red"></i>
+                </div>
+                <div>
+                  <div class="text-white font-semibold text-sm">Monitoramento de Velocidade</div>
+                  <div class="text-gray-400 text-xs mt-0.5">Controle de comportamento do motorista</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-3 rounded-xl hover:bg-goulog-dark-2 transition-colors">
+                <div class="w-10 h-10 min-w-[2.5rem] rounded-lg bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center">
+                  <i class="fa-solid fa-bell text-goulog-red"></i>
+                </div>
+                <div>
+                  <div class="text-white font-semibold text-sm">Alertas Automáticos</div>
+                  <div class="text-gray-400 text-xs mt-0.5">Notificações de desvios de rota ou paradas</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-3 rounded-xl hover:bg-goulog-dark-2 transition-colors">
+                <div class="w-10 h-10 min-w-[2.5rem] rounded-lg bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center">
+                  <i class="fa-solid fa-temperature-half text-goulog-red"></i>
+                </div>
+                <div>
+                  <div class="text-white font-semibold text-sm">Controle de Temperatura</div>
+                  <div class="text-gray-400 text-xs mt-0.5">Para cargas sensíveis e produtos químicos</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTES -->
+    <section class="py-16 md:py-20 bg-goulog-dark-2 border-t border-gray-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10 reveal">
+          <h3 class="font-condensed font-700 text-2xl uppercase text-gray-400">Principais Clientes</h3>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-8 md:gap-16 reveal">
+          <div class="text-gray-500 hover:text-goulog-red transition-colors text-xl font-bold font-condensed tracking-wide cursor-default">HINOVEA</div>
+          <div class="text-gray-500 hover:text-goulog-red transition-colors text-xl font-bold font-condensed tracking-wide cursor-default">AGROCIÊNCIA</div>
+          <div class="text-gray-500 hover:text-goulog-red transition-colors text-xl font-bold font-condensed tracking-wide cursor-default">Mosaic Fertilizantes</div>
+          <div class="text-gray-500 hover:text-goulog-red transition-colors text-xl font-bold font-condensed tracking-wide cursor-default">Pochteca Coremal</div>
+          <div class="text-gray-500 hover:text-goulog-red transition-colors text-xl font-bold font-condensed tracking-wide cursor-default">São Martinho</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="py-20 bg-goulog-red relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10" style="background-image: url(&#39;https://cdn-ai.onspace.ai/onspace/project/uploads/eQMvnYBDNEd7MKKnRq9Pa7/Carta_de_apresentação_GOULOG_(1)_(1)_(1)_(1)_(1)_p2_0.jpeg&#39;); background-size: cover; background-position: center;"></div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center reveal">
+        <h2 class="font-condensed font-800 text-4xl md:text-5xl uppercase leading-tight mb-4 text-white">
+          Pronto para Transportar<br/>com Segurança?
+        </h2>
+        <p class="text-white/80 text-base md:text-lg mb-8 max-w-xl mx-auto">Entre em contato conosco e descubra como podemos ajudar sua empresa com transporte especializado.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="https://api.whatsapp.com/send?phone=5513988888888&amp;text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação" target="_blank" class="inline-flex items-center justify-center gap-2 bg-white text-goulog-red font-bold px-8 py-4 rounded-lg text-base uppercase tracking-wide hover:bg-gray-100 transition-all duration-300">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+            Fale no WhatsApp
+          </a>
+          <button onclick="showPage(&#39;contato&#39;)" class="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-bold px-8 py-4 rounded-lg text-base uppercase tracking-wide hover:bg-white/10 transition-all duration-300">
+            <i class="fa-solid fa-envelope"></i>
+            Enviar Mensagem
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- END PAGE HOME -->
+
+
+  <!-- ===== PAGE: SERVIÇOS ===== -->
+  <div id="page-servicos" class="page">
+    <!-- Hero Serviços -->
+    <section class="relative pt-32 pb-20 bg-goulog-dark overflow-hidden">
+      <div class="absolute inset-0" style="background-image:url(&#39;https://cdn-ai.onspace.ai/onspace/project/uploads/euccJGxfQJgMWhyvQjwCqp/ChatGPT_Image_4_de_abr._de_2026,_01_50_21.png&#39;); background-size:cover; background-position:center; opacity:0.08;"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-goulog-dark/80 to-goulog-dark"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex items-center justify-center gap-3 mb-5">
+          <div class="red-line"></div>
+          <span class="text-goulog-red text-sm font-bold tracking-[0.2em] uppercase">O que oferecemos</span>
+          <div class="red-line"></div>
+        </div>
+        <h1 class="font-condensed font-800 text-5xl md:text-7xl uppercase mb-6">Nossos <span class="text-goulog-red">Serviços</span></h1>
+        <p class="text-gray-300 text-lg max-w-2xl mx-auto">Soluções completas em logística rodoviária especializada para atender às necessidades críticas do seu negócio com máxima segurança.</p>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-20 bg-goulog-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-6 mb-16">
+          <!-- Serviço 1 -->
+          <div class="service-card grad-border p-8 reveal">
+            <div class="w-16 h-16 rounded-2xl bg-goulog-red flex items-center justify-center mb-6">
+              <i class="fa-solid fa-flask text-white text-2xl"></i>
+            </div>
+            <h3 class="font-condensed font-700 text-2xl uppercase mb-4">Cargas Químicas</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">Transporte especializado de produtos químicos com veículos adequados, equipamentos de segurança e motoristas capacitados e certificados para esse tipo de operação.</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-sm text-gray-300"><i class="fa-solid fa-check text-goulog-red text-xs"></i>Produtos não-perigosos classe 9</li>
+              <li class="flex items-center gap-2 text-sm text-gray-300"><i class="fa-solid fa-check text-goulog-red text-xs"></i>Fertilizantes líquidos</li>
+              <li class="flex items-center gap-2 text-sm text-gray-300"><i class="fa-solid fa-check text-goulog-red text-xs"></i>Solventes industriais</li>
+              <li class="flex items-center gap-2 text-sm text-gray-300"><i class="fa-solid fa-check text-goulog-red text-xs"></i>Insumos agrícolas</li>
+            </ul>
+          </div>
+
+          <!-- Serviço 2 -->
+          <div class="service-card grad-border p-8 reveal" style="transition-delay:0.1s">
+            <div class="w-16 h-16 rounded-2xl bg-goulog-red flex items-center justify-center mb-6">
+              <i class="fa-solid fa-triangle-exclamation text-white text-2xl"></i>
+            </div>
+            <h3 class="font-condensed font-700 text-2xl uppercase mb-4">Cargas Perigosas</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">Rigoroso controle de segurança e conformidade com a legislação brasileira e internacional para transporte de produtos perigosos em todo o território nacional.</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-sm text-gray-300"><i class="fa-solid fa-check text-goulog-red text-xs"></i>Conformidade ANTT/ONU</li>
+              <li class="flex items-center gap-2 text-sm text-gray-300"><i class="fa-solid fa-check text-goulog-red text-xs"></i>Plano de emergência (PAEA)</li>
+              <li class="flex items-center gap-2 text-sm text-gray-300"><i class="fa-solid fa-check text-goulog-red text-xs"></i>Motoristas com MOPP/CIPP</li>
+              <li class="flex items-center gap-2 text-sm text-gray-300"><i class="fa-solid fa-check text-goulog-red text-xs"></i>Veículos licenciados INMETRO</li>
+            </ul>
+          </div>
+
+          <!-- Serviço 3 -->
+          <div class="service-card grad-border p-8 reveal" style="transition-delay:0.2s">
+            <div class="w-16 h-16 rounded-2xl bg-goulog-red flex items-center justify-center mb-6">
+              <i class="fa-solid fa-truck-fast text-white text-2xl"></i>
+            </div>
+            <h3 class="font-condensed font-700 text-2xl uppercase mb-4">Logística Rodoviária</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">Planejamento de rotas, otimização de custos e prazos para cargas gerais e carga seca em todo o território nacional com rastreamento em tempo real.</p>
+            <ul class="space-y-2">
+              <li class="flex items-center gap-2 text-sm text-gray-300"><i class="fa-solid fa-check text-goulog-red text-xs"></i>Transporte carga seca geral</li>
+              <li class="flex items-center gap-2 text-sm text-gray-300"><i class="fa-solid fa-check text-goulog-red text-xs"></i>Otimização de rotas</li>
+              <li class="flex items-center gap-2 text-sm text-gray-300"><i class="fa-solid fa-check text-goulog-red text-xs"></i>Cobertura nacional</li>
+              <li class="flex items-center gap-2 text-sm text-gray-300"><i class="fa-solid fa-check text-goulog-red text-xs"></i>Gestão de frotas dedicadas</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Serviços extras -->
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="service-card bg-goulog-dark-3 rounded-2xl p-6 border border-gray-700 flex gap-5 items-start reveal-left">
+            <div class="w-12 h-12 min-w-[3rem] rounded-xl bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center">
+              <i class="fa-solid fa-droplet text-goulog-red text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-condensed font-700 text-xl uppercase mb-2">Transporte a Granel</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">Transporte de granéis líquidos e sólidos com carretas tanque, graneleiros e equipamentos adequados para cada tipo de produto.</p>
+            </div>
+          </div>
+
+          <div class="service-card bg-goulog-dark-3 rounded-2xl p-6 border border-gray-700 flex gap-5 items-start reveal-right">
+            <div class="w-12 h-12 min-w-[3rem] rounded-xl bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center">
+              <i class="fa-solid fa-warehouse text-goulog-red text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-condensed font-700 text-xl uppercase mb-2">Armazenagem &amp; Hub</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">10.000 m² de infraestrutura própria em Jacupiranga-SP, com toda estrutura para movimentação, armazenagem e transbordo de cargas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="py-20 bg-goulog-dark-2">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal">
+          <div class="flex items-center justify-center gap-3 mb-5">
+            <div class="red-line"></div>
+            <span class="text-goulog-red text-sm font-bold tracking-[0.2em] uppercase">Por que nos escolher</span>
+            <div class="red-line"></div>
+          </div>
+          <h2 class="font-condensed font-800 text-4xl md:text-5xl uppercase">Nossos <span class="text-goulog-red">Diferenciais</span></h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="text-center reveal" style="transition-delay:0s">
+            <div class="w-16 h-16 rounded-full bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-shield-halved text-goulog-red text-2xl"></i>
+            </div>
+            <h4 class="font-condensed font-700 text-lg uppercase mb-2">Segurança Máxima</h4>
+            <p class="text-gray-400 text-xs leading-relaxed">Certificações e protocolos rígidos de segurança</p>
+          </div>
+          <div class="text-center reveal" style="transition-delay:0.1s">
+            <div class="w-16 h-16 rounded-full bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-clock text-goulog-red text-2xl"></i>
+            </div>
+            <h4 class="font-condensed font-700 text-lg uppercase mb-2">Pontualidade</h4>
+            <p class="text-gray-400 text-xs leading-relaxed">Entregas no prazo com rastreamento em tempo real</p>
+          </div>
+          <div class="text-center reveal" style="transition-delay:0.2s">
+            <div class="w-16 h-16 rounded-full bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-headset text-goulog-red text-2xl"></i>
+            </div>
+            <h4 class="font-condensed font-700 text-lg uppercase mb-2">Suporte 24h</h4>
+            <p class="text-gray-400 text-xs leading-relaxed">Equipe disponível a qualquer momento</p>
+          </div>
+          <div class="text-center reveal" style="transition-delay:0.3s">
+            <div class="w-16 h-16 rounded-full bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center mx-auto mb-4">
+              <i class="fa-solid fa-handshake text-goulog-red text-2xl"></i>
+            </div>
+            <h4 class="font-condensed font-700 text-lg uppercase mb-2">Parceria Real</h4>
+            <p class="text-gray-400 text-xs leading-relaxed">Construímos relações de longo prazo</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nossa História Timeline -->
+    <section class="py-20 bg-goulog-dark">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14 reveal">
+          <div class="flex items-center justify-center gap-3 mb-5">
+            <div class="red-line"></div>
+            <span class="text-goulog-red text-sm font-bold tracking-[0.2em] uppercase">Trajetória</span>
+            <div class="red-line"></div>
+          </div>
+          <h2 class="font-condensed font-800 text-4xl md:text-5xl uppercase">Nossa <span class="text-goulog-red">História</span></h2>
+        </div>
+
+        <div class="relative pl-8 border-l-2 border-gray-700 space-y-10">
+          <div class="relative timeline-item reveal">
+            <div class="bg-goulog-dark-3 rounded-xl p-5 border border-gray-700">
+              <span class="text-goulog-red font-bold font-condensed text-2xl">2003</span>
+              <h4 class="font-semibold text-white mt-1 mb-2">Fundação da Empresa</h4>
+              <p class="text-gray-400 text-sm leading-relaxed">A GOULOG foi fundada com o objetivo de oferecer soluções especializadas no transporte de produtos químicos perigosos, a granel e carga seca em geral.</p>
+            </div>
+          </div>
+          <div class="relative timeline-item reveal" style="transition-delay:0.1s">
+            <div class="bg-goulog-dark-3 rounded-xl p-5 border border-gray-700">
+              <span class="text-goulog-red font-bold font-condensed text-2xl">2008</span>
+              <h4 class="font-semibold text-white mt-1 mb-2">Expansão da Frota</h4>
+              <p class="text-gray-400 text-sm leading-relaxed">Ampliação significativa da frota própria, atingindo cobertura em todo o território nacional com mais de 30 conjuntos em operação.</p>
+            </div>
+          </div>
+          <div class="relative timeline-item reveal" style="transition-delay:0.2s">
+            <div class="bg-goulog-dark-3 rounded-xl p-5 border border-gray-700">
+              <span class="text-goulog-red font-bold font-condensed text-2xl">2015</span>
+              <h4 class="font-semibold text-white mt-1 mb-2">Certificação SASSMAQ</h4>
+              <p class="text-gray-400 text-sm leading-relaxed">Obtenção da qualificação SASSMAQ, consolidando nosso compromisso com segurança, saúde, meio ambiente e qualidade operacional.</p>
+            </div>
+          </div>
+          <div class="relative timeline-item reveal" style="transition-delay:0.3s">
+            <div class="bg-goulog-dark-3 rounded-xl p-5 border border-gray-700">
+              <span class="text-goulog-red font-bold font-condensed text-2xl">2020</span>
+              <h4 class="font-semibold text-white mt-1 mb-2">Sede Própria em Jacupiranga</h4>
+              <p class="text-gray-400 text-sm leading-relaxed">Inauguração da sede própria de 10.000 m² na Rodovia Regis Bittencourt, em Jacupiranga-SP, com infraestrutura completa para operações logísticas.</p>
+            </div>
+          </div>
+          <div class="relative timeline-item reveal" style="transition-delay:0.4s">
+            <div class="bg-goulog-dark-3 rounded-xl p-5 border border-goulog-red/30">
+              <span class="text-goulog-red font-bold font-condensed text-2xl">Hoje</span>
+              <h4 class="font-semibold text-white mt-1 mb-2">+20 Anos de Excelência</h4>
+              <p class="text-gray-400 text-sm leading-relaxed">Com mais de 50 conjuntos próprios, 15.000+ fretes realizados e 872.000+ toneladas transportadas, a GOULOG é referência em logística especializada no Brasil.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Serviços -->
+    <section class="py-16 bg-goulog-red relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10" style="background-image:url(&#39;https://cdn-ai.onspace.ai/onspace/project/uploads/eQMvnYBDNEd7MKKnRq9Pa7/Carta_de_apresentação_GOULOG_(1)_(1)_(1)_(1)_(1)_p2_0.jpeg&#39;); background-size:cover;"></div>
+      <div class="relative max-w-7xl mx-auto px-4 text-center reveal">
+        <h2 class="font-condensed font-800 text-4xl md:text-5xl uppercase mb-4 text-white">Solicite uma Cotação Agora</h2>
+        <p class="text-white/80 mb-8 max-w-lg mx-auto">Nossa equipe está pronta para atender a sua necessidade com a melhor solução em transporte especializado.</p>
+        <a href="https://api.whatsapp.com/send?phone=5513988888888&amp;text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação%20de%20transporte" target="_blank" class="inline-flex items-center gap-2 bg-white text-goulog-red font-bold px-10 py-4 rounded-lg text-base uppercase tracking-wide hover:bg-gray-100 transition-all">
+          <i class="fa-brands fa-whatsapp text-xl"></i>
+          Falar com um Especialista
+        </a>
+      </div>
+    </section>
+  </div><!-- END PAGE SERVIÇOS -->
+
+
+  <!-- ===== PAGE: CONTATO ===== -->
+  <div id="page-contato" class="page">
+    <!-- Hero Contato -->
+    <section class="relative pt-32 pb-16 bg-goulog-dark overflow-hidden">
+      <div class="absolute inset-0" style="background-image:url(&#39;https://cdn-ai.onspace.ai/onspace/project/uploads/eQMvnYBDNEd7MKKnRq9Pa7/Carta_de_apresentação_GOULOG_(1)_(1)_(1)_(1)_(1)_p2_0.jpeg&#39;); background-size:cover; background-position:center 30%; opacity:0.06;"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-goulog-dark/70 to-goulog-dark"></div>
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex items-center justify-center gap-3 mb-5">
+          <div class="red-line"></div>
+          <span class="text-goulog-red text-sm font-bold tracking-[0.2em] uppercase">Fale Conosco</span>
+          <div class="red-line"></div>
+        </div>
+        <h1 class="font-condensed font-800 text-5xl md:text-7xl uppercase mb-6">Entre em <span class="text-goulog-red">Contato</span></h1>
+        <p class="text-gray-300 text-lg max-w-xl mx-auto">Solicite uma cotação, tire dúvidas ou inicie uma parceria. Estamos sempre prontos para atender.</p>
+      </div>
+    </section>
+
+    <!-- Contact main -->
+    <section class="py-16 bg-goulog-dark">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-5 gap-10">
+          <!-- Info sidebar -->
+          <div class="lg:col-span-2 space-y-6 reveal-left">
+            <!-- WhatsApp -->
+            <a href="https://api.whatsapp.com/send?phone=5513988888888&amp;text=Olá,%20gostaria%20de%20solicitar%20uma%20cotação" target="_blank" class="flex items-start gap-4 bg-goulog-dark-3 hover:bg-goulog-dark-4 border border-gray-700 hover:border-green-500/50 rounded-2xl p-5 transition-all group">
+              <div class="w-12 h-12 min-w-[3rem] rounded-xl bg-green-500/10 border border-green-500/30 flex items-center justify-center group-hover:bg-green-500/20 transition-colors">
+                <i class="fa-brands fa-whatsapp text-green-400 text-2xl"></i>
+              </div>
+              <div>
+                <div class="text-white font-semibold">WhatsApp</div>
+                <div class="text-gray-400 text-sm mt-0.5">(13) 98888-8888</div>
+                <div class="text-green-400 text-xs mt-1 font-semibold">Clique para chamar →</div>
+              </div>
+            </a>
+
+            <!-- Telefone -->
+            <a href="tel:+551332321234" class="flex items-start gap-4 bg-goulog-dark-3 hover:bg-goulog-dark-4 border border-gray-700 hover:border-goulog-red/50 rounded-2xl p-5 transition-all group">
+              <div class="w-12 h-12 min-w-[3rem] rounded-xl bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center group-hover:bg-goulog-red/20 transition-colors">
+                <i class="fa-solid fa-phone text-goulog-red text-xl"></i>
+              </div>
+              <div>
+                <div class="text-white font-semibold">Telefone</div>
+                <div class="text-gray-400 text-sm mt-0.5">(13) 3232-1234</div>
+                <div class="text-gray-500 text-xs mt-1">Seg–Sex, 08h–18h</div>
+              </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:comercial@goulogtransportes.com.br" class="flex items-start gap-4 bg-goulog-dark-3 hover:bg-goulog-dark-4 border border-gray-700 hover:border-blue-500/50 rounded-2xl p-5 transition-all group">
+              <div class="w-12 h-12 min-w-[3rem] rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center group-hover:bg-blue-500/20 transition-colors">
+                <i class="fa-solid fa-envelope text-blue-400 text-xl"></i>
+              </div>
+              <div>
+                <div class="text-white font-semibold">E-mail Comercial</div>
+                <div class="text-gray-400 text-sm mt-0.5">comercial@goulogtransportes.com.br</div>
+                <div class="text-gray-500 text-xs mt-1">Resposta em até 24h</div>
+              </div>
+            </a>
+
+            <!-- Endereço -->
+            <div class="flex items-start gap-4 bg-goulog-dark-3 border border-gray-700 rounded-2xl p-5">
+              <div class="w-12 h-12 min-w-[3rem] rounded-xl bg-goulog-red/10 border border-goulog-red/30 flex items-center justify-center">
+                <i class="fa-solid fa-location-dot text-goulog-red text-xl"></i>
+              </div>
+              <div>
+                <div class="text-white font-semibold">Sede Jacupiranga – SP</div>
+                <div class="text-gray-400 text-sm mt-0.5">Rodovia Regis Bittencourt, S/N<br/>Jacupiranga – SP, 11930-000</div>
+                <div class="text-gray-500 text-xs mt-1">10.000 m² de infraestrutura</div>
+              </div>
+            </div>
+
+            <!-- Horário -->
+            <div class="bg-goulog-dark-3 border border-gray-700 rounded-2xl p-5">
+              <div class="flex items-center gap-3 mb-3">
+                <i class="fa-solid fa-clock text-goulog-red"></i>
+                <div class="text-white font-semibold">Horário de Atendimento</div>
+              </div>
+              <div class="space-y-2">
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-400">Segunda a Sexta</span>
+                  <span class="text-white font-semibold">08h00 – 18h00</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-400">Sábado</span>
+                  <span class="text-white font-semibold">08h00 – 12h00</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-400">Emergências</span>
+                  <span class="text-green-400 font-semibold">24h / 7 dias</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="bg-goulog-dark-3 border border-gray-700 rounded-2xl p-5">
+              <div class="text-white font-semibold mb-4">Redes Sociais</div>
+              <div class="flex gap-3">
+                <a href="https://www.instagram.com/goulogtransportes" target="_blank" class="w-11 h-11 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 flex items-center justify-center text-white hover:scale-110 transition-transform" aria-label="Instagram GOULOG">
+                  <i class="fa-brands fa-instagram text-lg"></i>
+                </a>
+                <a href="https://www.facebook.com/goulogtransportes" target="_blank" class="w-11 h-11 rounded-xl bg-blue-600 flex items-center justify-center text-white hover:scale-110 transition-transform" aria-label="Facebook GOULOG">
+                  <i class="fa-brands fa-facebook-f text-lg"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/goulog-transportes" target="_blank" class="w-11 h-11 rounded-xl bg-blue-700 flex items-center justify-center text-white hover:scale-110 transition-transform" aria-label="LinkedIn GOULOG">
+                  <i class="fa-brands fa-linkedin-in text-lg"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=5513988888888" target="_blank" class="w-11 h-11 rounded-xl bg-green-500 flex items-center justify-center text-white hover:scale-110 transition-transform" aria-label="WhatsApp GOULOG">
+                  <i class="fa-brands fa-whatsapp text-lg"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form + Map -->
+          <div class="lg:col-span-3 space-y-6 reveal-right">
+            <!-- Contact Form -->
+            <div class="bg-goulog-dark-3 rounded-2xl p-6 md:p-8 border border-gray-700">
+              <h2 class="font-condensed font-700 text-2xl uppercase mb-6 text-white">Envie uma Mensagem</h2>
+              <form id="contact-form" class="space-y-4">
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-gray-400 text-xs font-semibold uppercase tracking-wide mb-2">Nome *</label>
+                    <input type="text" id="f-nome" placeholder="Seu nome completo" required="" class="form-input w-full bg-goulog-dark border border-gray-600 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 transition-all"/>
+                  </div>
+                  <div>
+                    <label class="block text-gray-400 text-xs font-semibold uppercase tracking-wide mb-2">Empresa</label>
+                    <input type="text" id="f-empresa" placeholder="Nome da sua empresa" class="form-input w-full bg-goulog-dark border border-gray-600 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 transition-all"/>
+                  </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-gray-400 text-xs font-semibold uppercase tracking-wide mb-2">E-mail *</label>
+                    <input type="email" id="f-email" placeholder="seu@email.com" required="" class="form-input w-full bg-goulog-dark border border-gray-600 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 transition-all"/>
+                  </div>
+                  <div>
+                    <label class="block text-gray-400 text-xs font-semibold uppercase tracking-wide mb-2">Telefone / WhatsApp *</label>
+                    <input type="tel" id="f-tel" placeholder="(13) 99999-9999" required="" class="form-input w-full bg-goulog-dark border border-gray-600 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 transition-all"/>
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-gray-400 text-xs font-semibold uppercase tracking-wide mb-2">Serviço de Interesse</label>
+                  <select id="f-servico" class="form-input w-full bg-goulog-dark border border-gray-600 rounded-xl px-4 py-3 text-white text-sm transition-all">
+                    <option value="" class="bg-goulog-dark">Selecione um serviço...</option>
+                    <option value="quimicas" class="bg-goulog-dark">Transporte de Cargas Químicas</option>
+                    <option value="perigosas" class="bg-goulog-dark">Transporte de Cargas Perigosas</option>
+                    <option value="granel" class="bg-goulog-dark">Transporte a Granel</option>
+                    <option value="rodoviaria" class="bg-goulog-dark">Logística Rodoviária Geral</option>
+                    <option value="outro" class="bg-goulog-dark">Outro</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-gray-400 text-xs font-semibold uppercase tracking-wide mb-2">Mensagem *</label>
+                  <textarea id="f-msg" rows="4" placeholder="Descreva sua necessidade, origem, destino, tipo de carga e volume estimado..." required="" class="form-input w-full bg-goulog-dark border border-gray-600 rounded-xl px-4 py-3 text-white text-sm placeholder-gray-600 transition-all resize-none"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-goulog-red hover:bg-goulog-red-dark text-white font-bold py-4 rounded-xl uppercase tracking-wide transition-all duration-300 flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-red-900/30">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  Enviar Mensagem
+                </button>
+              </form>
+              <!-- Success message (hidden) -->
+              <div id="form-success" class="hidden mt-4 bg-green-500/10 border border-green-500/30 rounded-xl p-4 text-center">
+                <i class="fa-solid fa-circle-check text-green-400 text-2xl mb-2 block"></i>
+                <div class="text-green-400 font-semibold">Mensagem enviada com sucesso!</div>
+                <div class="text-gray-400 text-sm mt-1">Nossa equipe entrará em contato em breve.</div>
+              </div>
+            </div>
+
+            <!-- Quick actions -->
+            <div class="grid grid-cols-2 gap-4">
+              <a href="https://api.whatsapp.com/send?phone=5513988888888&amp;text=Olá,%20preciso%20de%20uma%20cotação%20urgente" target="_blank" class="bg-green-500/10 border border-green-500/30 hover:bg-green-500/20 rounded-2xl p-4 flex items-center gap-3 transition-all group">
+                <i class="fa-brands fa-whatsapp text-green-400 text-2xl group-hover:scale-110 transition-transform"></i>
+                <div>
+                  <div class="text-white font-semibold text-sm">WhatsApp</div>
+                  <div class="text-gray-400 text-xs">Resposta imediata</div>
+                </div>
+              </a>
+              <a href="tel:+5513988888888" class="bg-goulog-red/10 border border-goulog-red/30 hover:bg-goulog-red/20 rounded-2xl p-4 flex items-center gap-3 transition-all group">
+                <i class="fa-solid fa-phone text-goulog-red text-2xl group-hover:scale-110 transition-transform"></i>
+                <div>
+                  <div class="text-white font-semibold text-sm">Ligar Agora</div>
+                  <div class="text-gray-400 text-xs">(13) 98888-8888</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Maps -->
+    <section class="py-16 bg-goulog-dark-2">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-8 reveal">
+          <div class="flex items-center justify-center gap-3 mb-4">
+            <div class="red-line"></div>
+            <span class="text-goulog-red text-sm font-bold tracking-[0.2em] uppercase">Nossa Localização</span>
+            <div class="red-line"></div>
+          </div>
+          <h2 class="font-condensed font-800 text-3xl md:text-4xl uppercase">Como <span class="text-goulog-red">Chegar</span></h2>
+          <p class="text-gray-400 text-sm mt-2">Rodovia Regis Bittencourt – Jacupiranga, SP</p>
+        </div>
+
+        <div class="reveal rounded-2xl overflow-hidden border border-gray-700" style="height:420px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14676.5!2d-48.003!3d-24.696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d4d2c5f2e3a8b1%3A0x1a2b3c4d5e6f7890!2sJacupiranga%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1680000000000!5m2!1spt-BR!2sbr" width="100%" height="420" style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(0.85) contrast(0.9);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização GOULOG Transportes - Jacupiranga SP"></iframe>
+        </div>
+
+        <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center reveal">
+          <a href="https://maps.google.com/?q=Jacupiranga,SP,Brasil,Rodovia+Regis+Bittencourt" target="_blank" class="inline-flex items-center justify-center gap-2 bg-goulog-red hover:bg-goulog-red-dark text-white font-bold px-6 py-3 rounded-xl transition-all uppercase tracking-wide text-sm">
+            <i class="fa-brands fa-google text-white"></i>
+            Abrir no Google Maps
+          </a>
+          <a href="https://waze.com/ul?q=Jacupiranga+SP+Rodovia+Regis+Bittencourt" target="_blank" class="inline-flex items-center justify-center gap-2 border border-blue-500 text-blue-400 hover:bg-blue-500/10 font-bold px-6 py-3 rounded-xl transition-all uppercase tracking-wide text-sm">
+            <i class="fa-solid fa-route"></i>
+            Abrir no Waze
+          </a>
+        </div>
+      </div>
+    </section>
+  </div><!-- END PAGE CONTATO -->
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-black border-t border-gray-800 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-10">
+        <!-- Brand -->
+        <div class="md:col-span-2">
+          <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG Transportes" class="h-14 w-auto mb-4"/>
+          <p class="text-gray-400 text-sm leading-relaxed max-w-xs">Mais de 20 anos conectando caminhos e entregando confiança em todo o Brasil. Especialistas em cargas químicas, perigosas e a granel.</p>
+          <div class="flex gap-3 mt-5">
+            <a href="https://www.instagram.com/goulogtransportes" target="_blank" aria-label="Instagram" class="w-10 h-10 rounded-lg bg-goulog-dark-3 hover:bg-gradient-to-br hover:from-purple-600 hover:to-pink-500 border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-transparent transition-all">
+              <i class="fa-brands fa-instagram text-base"></i>
+            </a>
+            <a href="https://www.facebook.com/goulogtransportes" target="_blank" aria-label="Facebook" class="w-10 h-10 rounded-lg bg-goulog-dark-3 hover:bg-blue-600 border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-transparent transition-all">
+              <i class="fa-brands fa-facebook-f text-base"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/goulog-transportes" target="_blank" aria-label="LinkedIn" class="w-10 h-10 rounded-lg bg-goulog-dark-3 hover:bg-blue-700 border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-transparent transition-all">
+              <i class="fa-brands fa-linkedin-in text-base"></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5513988888888" target="_blank" aria-label="WhatsApp" class="w-10 h-10 rounded-lg bg-goulog-dark-3 hover:bg-green-500 border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-transparent transition-all">
+              <i class="fa-brands fa-whatsapp text-base"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="text-white font-semibold font-condensed uppercase tracking-wide mb-4">Navegação</h4>
+          <ul class="space-y-2">
+            <li><button onclick="showPage(&#39;home&#39;)" class="text-gray-400 hover:text-goulog-red text-sm transition-colors">Início</button></li>
+            <li><button onclick="showPage(&#39;servicos&#39;)" class="text-gray-400 hover:text-goulog-red text-sm transition-colors">Serviços</button></li>
+            <li><button onclick="showPage(&#39;contato&#39;)" class="text-gray-400 hover:text-goulog-red text-sm transition-colors">Contato</button></li>
+            <li><a href="#" class="text-gray-400 hover:text-goulog-red text-sm transition-colors">Quem Somos</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-goulog-red text-sm transition-colors">Certificações</a></li>
+          </ul>
+        </div>
+
+        <!-- Contato -->
+        <div>
+          <h4 class="text-white font-semibold font-condensed uppercase tracking-wide mb-4">Contato</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-phone text-goulog-red text-xs mt-1"></i>
+              <a href="tel:+551332321234" class="text-gray-400 hover:text-white text-sm transition-colors">(13) 3232-1234</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-brands fa-whatsapp text-green-400 text-xs mt-1"></i>
+              <a href="https://api.whatsapp.com/send?phone=5513988888888" target="_blank" class="text-gray-400 hover:text-white text-sm transition-colors">(13) 98888-8888</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-envelope text-goulog-red text-xs mt-1"></i>
+              <a href="mailto:comercial@goulogtransportes.com.br" class="text-gray-400 hover:text-white text-sm transition-colors break-all">comercial@goulogtransportes.com.br</a>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-goulog-red text-xs mt-1"></i>
+              <span class="text-gray-400 text-sm">Rod. Regis Bittencourt – Jacupiranga, SP</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-gray-500 text-xs">© 2024 GOULOG Transportes. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-2">
+          <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+          <span class="text-gray-500 text-xs">Operando 24h / 7 dias na semana</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float Button -->
+  <div class="whatsapp-float">
+    <a href="https://api.whatsapp.com/send?phone=5513988888888&amp;text=Olá,%20gostaria%20de%20mais%20informações%20sobre%20os%20serviços%20da%20GOULOG" target="_blank" aria-label="WhatsApp GOULOG">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // ==================== PAGE NAVIGATION ====================
+      window.showPage = function(pageId) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        document.getElementById('page-' + pageId).classList.add('active');
+        
+        // Update nav active states
+        document.querySelectorAll('[id^="nav-"]').forEach(n => n.classList.remove('active-nav'));
+        const navEl = document.getElementById('nav-' + pageId);
+        if (navEl) navEl.classList.add('active-nav');
+
+        // Scroll to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Re-trigger reveal animations
+        setTimeout(() => {
+          initReveal();
+        }, 100);
+      };
+
+      // ==================== MOBILE MENU ====================
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      let menuOpen = false;
+
+      hamburger.addEventListener('click', () => {
+        menuOpen = !menuOpen;
+        mobileMenu.classList.toggle('open', menuOpen);
+      });
+
+      window.closeMobile = function() {
+        menuOpen = false;
+        mobileMenu.classList.remove('open');
+      };
+
+      // ==================== NAVBAR SCROLL ====================
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+      });
+
+      // ==================== SCROLL REVEAL ====================
+      function initReveal() {
+        const elements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('revealed');
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        elements.forEach(el => {
+          el.classList.remove('revealed');
+          observer.observe(el);
+        });
+      }
+
+      initReveal();
+
+      // ==================== COUNTER ANIMATION ====================
+      function animateCounters() {
+        const stats = document.querySelectorAll('.stat-number[data-target]');
+        stats.forEach(stat => {
+          const target = parseInt(stat.getAttribute('data-target'));
+          const suffix = stat.textContent.replace(/\d+/, '');
+          let current = 0;
+          const increment = target / 60;
+          const timer = setInterval(() => {
+            current = Math.min(current + increment, target);
+            stat.textContent = Math.floor(current) + suffix;
+            if (current >= target) clearInterval(timer);
+          }, 25);
+        });
+      }
+
+      // Trigger counters on stats section
+      const statsSection = document.querySelector('.bg-goulog-red .stat-number');
+      if (statsSection) {
+        const counterObserver = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            animateCounters();
+            counterObserver.disconnect();
+          }
+        }, { threshold: 0.5 });
+        counterObserver.observe(statsSection.closest('section') || statsSection.parentElement);
+      }
+
+      // ==================== CONTACT FORM ====================
+      const form = document.getElementById('contact-form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const nome = document.getElementById('f-nome').value;
+          const email = document.getElementById('f-email').value;
+          const tel = document.getElementById('f-tel').value;
+          const msg = document.getElementById('f-msg').value;
+          const servico = document.getElementById('f-servico').value;
+
+          // Build WhatsApp message
+          const wa = `Olá! Me chamo ${nome}.\n\n*Empresa:* ${document.getElementById('f-empresa').value || 'Não informado'}\n*E-mail:* ${email}\n*Telefone:* ${tel}\n*Serviço:* ${servico || 'Não especificado'}\n\n*Mensagem:*\n${msg}`;
+          const encoded = encodeURIComponent(wa);
+          
+          // Show success
+          form.style.display = 'none';
+          document.getElementById('form-success').classList.remove('hidden');
+
+          // Open WhatsApp after 500ms
+          setTimeout(() => {
+            window.open(`https://api.whatsapp.com/send?phone=5513988888888&text=${encoded}`, '_blank');
+          }, 500);
+        });
+      }
+
+      // ==================== INPUT PHONE MASK ====================
+      const telInput = document.getElementById('f-tel');
+      if (telInput) {
+        telInput.addEventListener('input', (e) => {
+          let v = e.target.value.replace(/\D/g, '');
+          if (v.length <= 10) {
+            v = v.replace(/(\d{2})(\d{4})(\d{0,4})/, '($1) $2-$3');
+          } else {
+            v = v.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
+          }
+          e.target.value = v;
+        });
+      }
+
+      // ==================== ACTIVE PAGE ON LOAD ====================
+      // Re-run reveal for initial page
+      setTimeout(initReveal, 200);
+    });
+  </script>
+
+
+</body></html>
