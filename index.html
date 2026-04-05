@@ -411,34 +411,73 @@
           <p class="text-gray-400 text-base mt-4 max-w-xl mx-auto">Veículos de última geração, 100% rastreados e prontos para atender com segurança e eficiência.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
-          <!-- Image 1 - Main Hero Truck -->
+        <!-- Gallery Grid -->
+        <div class="grid md:grid-cols-3 gap-4 mb-4">
+          <!-- Image 1 - Main Fleet -->
           <div class="md:col-span-2 reveal-left">
-            <div class="relative rounded-2xl overflow-hidden h-72 md:h-80 group">
+            <div class="gallery-item relative rounded-2xl overflow-hidden h-72 md:h-80 group cursor-pointer" onclick="openLightbox(0)">
               <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/eQMvnYBDNEd7MKKnRq9Pa7/Carta_de_apresentação_GOULOG_(1)_(1)_(1)_(1)_(1)_p2_0.jpeg" alt="Frota de caminhões brancos GOULOG enfileirados" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark via-transparent to-transparent"></div>
-              <div class="absolute bottom-4 left-4">
-                <span class="bg-goulog-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">50+ Conjuntos Próprios</span>
+              <!-- GOULOG logo watermark -->
+              <div class="absolute inset-0 flex items-end justify-start p-5 bg-gradient-to-t from-goulog-dark/80 via-goulog-dark/20 to-transparent">
+                <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-10 w-auto opacity-90" />
+              </div>
+              <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <i class="fa-solid fa-expand text-white text-sm"></i>
+              </div>
+              <div class="absolute top-3 left-3">
+                <span class="bg-goulog-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">50+ Conjuntos</span>
               </div>
             </div>
           </div>
 
-          <div class="flex flex-col gap-6 reveal-right">
-            <div class="relative rounded-2xl overflow-hidden h-32 md:h-36 group">
+          <div class="flex flex-col gap-4 reveal-right">
+            <div class="gallery-item relative rounded-2xl overflow-hidden h-36 md:h-[calc(50%-8px)] group cursor-pointer" onclick="openLightbox(1)">
               <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/DqFoBWCR9pW4dK7WTwEHuh/Modelo_4_-_Logotipo_-_GOULOG_p4_0.png" alt="Caminhão tanque GOULOG para cargas químicas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/70 to-transparent"></div>
-              <div class="absolute bottom-3 left-3">
-                <span class="text-white text-xs font-bold">Transporte a Granel</span>
+              <div class="absolute inset-0 flex items-end justify-start p-3 bg-gradient-to-t from-goulog-dark/80 to-transparent">
+                <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-6 w-auto opacity-85" />
+              </div>
+              <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <i class="fa-solid fa-expand text-white text-xs"></i>
               </div>
             </div>
-            <div class="relative rounded-2xl overflow-hidden h-32 md:h-36 group">
-              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/euccJGxfQJgMWhyvQjwCqp/ChatGPT_Image_4_de_abr._de_2026,_01_50_21.png" alt="Caminhão tanque com logo GOULOG vista frontal e traseira" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/70 to-transparent"></div>
-              <div class="absolute bottom-3 left-3">
-                <span class="text-white text-xs font-bold">Frota Identificada</span>
+            <div class="gallery-item relative rounded-2xl overflow-hidden h-36 md:h-[calc(50%-8px)] group cursor-pointer" onclick="openLightbox(2)">
+              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/euccJGxfQJgMWhyvQjwCqp/ChatGPT_Image_4_de_abr._de_2026,_01_50_21.png" alt="Caminhão tanque GOULOG vista frontal e traseira" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+              <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/50 to-transparent"></div>
+              <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <i class="fa-solid fa-expand text-white text-xs"></i>
               </div>
             </div>
           </div>
+        </div>
+
+        <!-- Second row -->
+        <div class="grid md:grid-cols-3 gap-4 reveal">
+          <div class="gallery-item relative rounded-2xl overflow-hidden h-52 group cursor-pointer" onclick="openLightbox(3)">
+            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/EdZDD9MWvAcqpgCXmbS5Jg/Captura_de_tela_2026-04-05_001125.png" alt="Galeria de veículos da frota GOULOG" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+            <div class="absolute inset-0 flex items-end justify-start p-4 bg-gradient-to-t from-goulog-dark/80 via-transparent to-transparent">
+              <div>
+                <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-8 w-auto opacity-90 mb-1" />
+                <span class="text-gray-300 text-xs">Frota Completa</span>
+              </div>
+            </div>
+            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <i class="fa-solid fa-expand text-white text-sm"></i>
+            </div>
+          </div>
+          <div class="md:col-span-2 gallery-item relative rounded-2xl overflow-hidden h-52 group cursor-pointer" onclick="openLightbox(2)">
+            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/euccJGxfQJgMWhyvQjwCqp/ChatGPT_Image_4_de_abr._de_2026,_01_50_21.png" alt="Caminhão GOULOG vermelho frente e traseira tanque" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-l from-goulog-dark/40 to-transparent"></div>
+            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <i class="fa-solid fa-expand text-white text-sm"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8 reveal">
+          <button onclick="openLightbox(0)" class="inline-flex items-center gap-2 border border-goulog-red text-goulog-red hover:bg-goulog-red hover:text-white font-bold px-6 py-3 rounded-xl transition-all duration-300 uppercase tracking-wide text-sm">
+            <i class="fa-solid fa-images"></i>
+            Ver Galeria Completa
+          </button>
         </div>
       </div>
     </section>
@@ -728,6 +767,64 @@
         </div>
         <h1 class="font-condensed font-800 text-5xl md:text-7xl uppercase mb-6">Nossos <span class="text-goulog-red">Serviços</span></h1>
         <p class="text-gray-300 text-lg max-w-2xl mx-auto">Soluções completas em logística rodoviária especializada para atender às necessidades críticas do seu negócio com máxima segurança.</p>
+      </div>
+    </section>
+
+    <!-- Fleet Gallery Section - Serviços Page -->
+    <section class="py-20 bg-goulog-dark-2">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 reveal">
+          <div class="flex items-center justify-center gap-3 mb-5">
+            <div class="red-line"></div>
+            <span class="text-goulog-red text-sm font-bold tracking-[0.2em] uppercase">Galeria</span>
+            <div class="red-line"></div>
+          </div>
+          <h2 class="font-condensed font-800 text-4xl md:text-5xl uppercase">Nossa <span class="text-goulog-red">Frota</span> em Ação</h2>
+          <p class="text-gray-400 text-base mt-4 max-w-xl mx-auto">Mais de 50 conjuntos próprios prontos para operar em todo o território nacional com segurança e eficiência.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+          <div class="gallery-item col-span-2 row-span-2 relative rounded-2xl overflow-hidden h-64 md:h-80 group cursor-pointer" onclick="openLightbox(2)">
+            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/euccJGxfQJgMWhyvQjwCqp/ChatGPT_Image_4_de_abr._de_2026,_01_50_21.png" alt="Caminhão tanque GOULOG vermelho frontal e traseiro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/70 via-transparent to-transparent flex items-end p-5">
+              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-10 w-auto opacity-90" />
+            </div>
+            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <i class="fa-solid fa-expand text-white text-sm"></i>
+            </div>
+            <div class="absolute top-3 left-3"><span class="bg-goulog-red/90 text-white text-xs font-bold px-2 py-1 rounded-lg">Frota Identificada</span></div>
+          </div>
+          <div class="gallery-item relative rounded-2xl overflow-hidden h-32 md:h-38 group cursor-pointer" onclick="openLightbox(0)">
+            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/eQMvnYBDNEd7MKKnRq9Pa7/Carta_de_apresentação_GOULOG_(1)_(1)_(1)_(1)_(1)_p2_0.jpeg" alt="Frota caminhões brancos GOULOG" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/70 to-transparent flex items-end p-2">
+              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-5 w-auto opacity-85" />
+            </div>
+            <div class="absolute top-2 right-2 w-6 h-6 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <i class="fa-solid fa-expand text-white text-xs"></i>
+            </div>
+          </div>
+          <div class="gallery-item relative rounded-2xl overflow-hidden h-32 md:h-38 group cursor-pointer" onclick="openLightbox(1)">
+            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/DqFoBWCR9pW4dK7WTwEHuh/Modelo_4_-_Logotipo_-_GOULOG_p4_0.png" alt="Caminhão tanque GOULOG cargas químicas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/60 to-transparent flex items-end p-2">
+              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-5 w-auto opacity-85" />
+            </div>
+            <div class="absolute top-2 right-2 w-6 h-6 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <i class="fa-solid fa-expand text-white text-xs"></i>
+            </div>
+          </div>
+          <div class="gallery-item col-span-2 relative rounded-2xl overflow-hidden h-32 md:h-38 group cursor-pointer" onclick="openLightbox(3)">
+            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/EdZDD9MWvAcqpgCXmbS5Jg/Captura_de_tela_2026-04-05_001125.png" alt="Galeria múltiplos veículos frota GOULOG" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-r from-goulog-dark/70 to-transparent flex items-end p-3">
+              <div>
+                <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-6 w-auto opacity-90" />
+              </div>
+            </div>
+            <div class="absolute top-2 right-2 w-6 h-6 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <i class="fa-solid fa-expand text-white text-xs"></i>
+            </div>
+            <div class="absolute top-2 left-2"><span class="bg-black/60 text-white text-xs font-bold px-2 py-1 rounded-lg">50+ Veículos</span></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1146,7 +1243,7 @@
 
         <div class="reveal rounded-2xl overflow-hidden border border-gray-700" style="height:420px;">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14676.5!2d-48.003!3d-24.696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d4d2c5f2e3a8b1%3A0x1a2b3c4d5e6f7890!2sJacupiranga%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1680000000000!5m2!1spt-BR!2sbr"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57911.51!2d-48.0032!3d-24.6958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d4d2c2d5d0a1f5%3A0x9a9f0d2c3b4e5f6a!2sJacupiranga%2C%20SP%2C%2011930-000!5e0!3m2!1spt-BR!2sbr!4v1712300000000!5m2!1spt-BR!2sbr"
             width="100%"
             height="420"
             style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(0.85) contrast(0.9);"
@@ -1158,13 +1255,13 @@
         </div>
 
         <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center reveal">
-          <a href="https://maps.google.com/?q=Jacupiranga,SP,Brasil,Rodovia+Regis+Bittencourt" target="_blank" class="inline-flex items-center justify-center gap-2 bg-goulog-red hover:bg-goulog-red-dark text-white font-bold px-6 py-3 rounded-xl transition-all uppercase tracking-wide text-sm">
+          <a href="https://share.google/eTUcOQSSnCiYToQoD" target="_blank" class="inline-flex items-center justify-center gap-2 bg-goulog-red hover:bg-goulog-red-dark text-white font-bold px-6 py-3 rounded-xl transition-all uppercase tracking-wide text-sm">
             <i class="fa-brands fa-google text-white"></i>
             Abrir no Google Maps
           </a>
-          <a href="https://waze.com/ul?q=Jacupiranga+SP+Rodovia+Regis+Bittencourt" target="_blank" class="inline-flex items-center justify-center gap-2 border border-blue-500 text-blue-400 hover:bg-blue-500/10 font-bold px-6 py-3 rounded-xl transition-all uppercase tracking-wide text-sm">
+          <a href="https://share.google/eTUcOQSSnCiYToQoD" target="_blank" class="inline-flex items-center justify-center gap-2 border border-goulog-red/50 text-goulog-red hover:bg-goulog-red/10 font-bold px-6 py-3 rounded-xl transition-all uppercase tracking-wide text-sm">
             <i class="fa-solid fa-route"></i>
-            Abrir no Waze
+            Ver Rota Completa
           </a>
         </div>
       </div>
@@ -1245,6 +1342,41 @@
       </div>
     </div>
   </footer>
+
+  <!-- ===== LIGHTBOX MODAL ===== -->
+  <div id="lightbox" class="fixed inset-0 z-[9998] bg-black/95 hidden flex items-center justify-center" onclick="closeLightboxBg(event)">
+    <div class="relative max-w-5xl w-full mx-4">
+      <!-- Close -->
+      <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors z-10">
+        <i class="fa-solid fa-xmark text-3xl"></i>
+      </button>
+      <!-- Prev -->
+      <button onclick="prevImage()" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 text-white/70 hover:text-white transition-colors hidden md:block">
+        <i class="fa-solid fa-chevron-left text-3xl"></i>
+      </button>
+      <!-- Next -->
+      <button onclick="nextImage()" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 text-white/70 hover:text-white transition-colors hidden md:block">
+        <i class="fa-solid fa-chevron-right text-3xl"></i>
+      </button>
+      <!-- Image -->
+      <div class="relative rounded-2xl overflow-hidden">
+        <img id="lightbox-img" src="" alt="" class="w-full max-h-[80vh] object-contain rounded-2xl" />
+        <!-- Logo overlay on lightbox -->
+        <div class="absolute bottom-4 left-4">
+          <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-10 w-auto opacity-80" />
+        </div>
+      </div>
+      <!-- Caption -->
+      <div class="text-center mt-4">
+        <p id="lightbox-caption" class="text-gray-400 text-sm"></p>
+        <div class="flex justify-center gap-2 mt-3">
+          <button onclick="prevImage()" class="md:hidden text-white/70 hover:text-white px-4 py-2 border border-gray-700 rounded-lg text-sm transition-colors"><i class="fa-solid fa-chevron-left mr-1"></i>Anterior</button>
+          <span id="lightbox-counter" class="text-gray-500 text-xs px-3 py-2"></span>
+          <button onclick="nextImage()" class="md:hidden text-white/70 hover:text-white px-4 py-2 border border-gray-700 rounded-lg text-sm transition-colors">Próxima<i class="fa-solid fa-chevron-right ml-1"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- WhatsApp Float Button -->
   <div class="whatsapp-float">
@@ -1387,6 +1519,62 @@
       // ==================== ACTIVE PAGE ON LOAD ====================
       // Re-run reveal for initial page
       setTimeout(initReveal, 200);
+
+      // ==================== LIGHTBOX ====================
+      const galleryImages = [
+        { src: 'https://cdn-ai.onspace.ai/onspace/project/uploads/eQMvnYBDNEd7MKKnRq9Pa7/Carta_de_apresentação_GOULOG_(1)_(1)_(1)_(1)_(1)_p2_0.jpeg', caption: 'Frota GOULOG – 50+ Conjuntos Próprios' },
+        { src: 'https://cdn-ai.onspace.ai/onspace/project/uploads/DqFoBWCR9pW4dK7WTwEHuh/Modelo_4_-_Logotipo_-_GOULOG_p4_0.png', caption: 'Caminhão Tanque GOULOG – Transporte a Granel' },
+        { src: 'https://cdn-ai.onspace.ai/onspace/project/uploads/euccJGxfQJgMWhyvQjwCqp/ChatGPT_Image_4_de_abr._de_2026,_01_50_21.png', caption: 'Caminhão GOULOG – Vista Frontal e Traseira' },
+        { src: 'https://cdn-ai.onspace.ai/onspace/project/uploads/EdZDD9MWvAcqpgCXmbS5Jg/Captura_de_tela_2026-04-05_001125.png', caption: 'Galeria da Frota GOULOG Transportes' },
+      ];
+      let currentIndex = 0;
+
+      window.openLightbox = function(index) {
+        currentIndex = index;
+        updateLightbox();
+        document.getElementById('lightbox').classList.remove('hidden');
+        document.getElementById('lightbox').classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      };
+
+      window.closeLightbox = function() {
+        document.getElementById('lightbox').classList.add('hidden');
+        document.getElementById('lightbox').classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      window.closeLightboxBg = function(e) {
+        if (e.target === document.getElementById('lightbox')) closeLightbox();
+      };
+
+      window.nextImage = function() {
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        updateLightbox();
+      };
+
+      window.prevImage = function() {
+        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        updateLightbox();
+      };
+
+      function updateLightbox() {
+        const img = document.getElementById('lightbox-img');
+        const caption = document.getElementById('lightbox-caption');
+        const counter = document.getElementById('lightbox-counter');
+        img.src = galleryImages[currentIndex].src;
+        img.alt = galleryImages[currentIndex].caption;
+        caption.textContent = galleryImages[currentIndex].caption;
+        counter.textContent = (currentIndex + 1) + ' / ' + galleryImages.length;
+      }
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        const lb = document.getElementById('lightbox');
+        if (lb.classList.contains('hidden')) return;
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+        if (e.key === 'Escape') closeLightbox();
+      });
     });
   </script>
 <script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
