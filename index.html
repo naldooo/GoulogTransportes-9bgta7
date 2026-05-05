@@ -409,64 +409,79 @@
           <p class="text-gray-400 text-base mt-4 max-w-xl mx-auto">Veículos de última geração, 100% rastreados e prontos para atender com segurança e eficiência.</p>
         </div>
 
-        <!-- Gallery Grid -->
-        <div class="grid md:grid-cols-3 gap-4 mb-4">
-          <!-- Image 1 - Main Fleet -->
-          <div class="md:col-span-2 reveal-left">
-            <div class="gallery-item relative rounded-2xl overflow-hidden h-72 md:h-80 group cursor-pointer" onclick="openLightbox(0)">
-              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/eQMvnYBDNEd7MKKnRq9Pa7/Carta_de_apresentação_GOULOG_(1)_(1)_(1)_(1)_(1)_p2_0.jpeg" alt="Frota de caminhões brancos GOULOG enfileirados" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
-              <!-- GOULOG logo watermark -->
-              <div class="absolute inset-0 flex items-end justify-start p-5 bg-gradient-to-t from-goulog-dark/80 via-goulog-dark/20 to-transparent">
-                <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-10 w-auto opacity-90"/>
+        <!-- Gallery Grid - Frota Real GOULOG -->
+        <!-- Hero image: Yellow Scania with tanker - side view -->
+        <div class="reveal mb-4">
+          <div class="gallery-item relative rounded-2xl overflow-hidden group cursor-pointer" style="height:420px;" onclick="openLightbox(0)">
+            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/87yt7zsm6raujhhoFJo6Mg/goulog_1.jpeg" alt="Scania R450 GOULOG amarela com carreta tanque inox - vista lateral" class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-1000" loading="lazy" style="transition: transform 1s ease;"/>
+            <!-- Dark gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark via-goulog-dark/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-goulog-dark/60 via-transparent to-transparent"></div>
+            <!-- Content overlay -->
+            <div class="absolute bottom-0 left-0 p-6 md:p-8">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="bg-goulog-red text-white text-xs font-bold px-3 py-1.5 rounded-lg uppercase tracking-widest">Scania R450</span>
+                <span class="bg-black/60 backdrop-blur text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-white/10">Cargas Químicas</span>
               </div>
-              <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <i class="fa-solid fa-expand text-white text-sm"></i>
-              </div>
-              <div class="absolute top-3 left-3">
-                <span class="bg-goulog-red text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">50+ Conjuntos</span>
-              </div>
+              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-10 w-auto opacity-95 mb-2"/>
+              <p class="text-gray-300 text-sm hidden md:block">Frota moderna e identificada para transporte especializado em todo o Brasil</p>
             </div>
-          </div>
-
-          <div class="flex flex-col gap-4 reveal-right">
-            <div class="gallery-item relative rounded-2xl overflow-hidden h-36 md:h-[calc(50%-8px)] group cursor-pointer" onclick="openLightbox(1)">
-              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/DqFoBWCR9pW4dK7WTwEHuh/Modelo_4_-_Logotipo_-_GOULOG_p4_0.png" alt="Caminhão tanque GOULOG para cargas químicas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
-              <div class="absolute inset-0 flex items-end justify-start p-3 bg-gradient-to-t from-goulog-dark/80 to-transparent">
-                <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-6 w-auto opacity-85"/>
-              </div>
-              <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <i class="fa-solid fa-expand text-white text-xs"></i>
-              </div>
+            <!-- Expand icon -->
+            <div class="absolute top-4 right-4 w-10 h-10 rounded-xl bg-black/50 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-white/10">
+              <i class="fa-solid fa-expand text-white text-sm"></i>
             </div>
-            <div class="gallery-item relative rounded-2xl overflow-hidden h-36 md:h-[calc(50%-8px)] group cursor-pointer" onclick="openLightbox(2)">
-              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/euccJGxfQJgMWhyvQjwCqp/ChatGPT_Image_4_de_abr._de_2026,_01_50_21.png" alt="Caminhão tanque GOULOG vista frontal e traseira" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
-              <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/50 to-transparent"></div>
-              <div class="absolute top-2 right-2 w-7 h-7 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <i class="fa-solid fa-expand text-white text-xs"></i>
+            <!-- Vehicle count badge -->
+            <div class="absolute top-4 left-4">
+              <div class="bg-goulog-red/90 backdrop-blur text-white text-xs font-bold px-4 py-2 rounded-xl uppercase tracking-wide flex items-center gap-2">
+                <i class="fa-solid fa-truck"></i> 50+ Conjuntos Próprios
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Second row -->
-        <div class="grid md:grid-cols-3 gap-4 reveal">
-          <div class="gallery-item relative rounded-2xl overflow-hidden h-52 group cursor-pointer" onclick="openLightbox(3)">
-            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/EdZDD9MWvAcqpgCXmbS5Jg/Captura_de_tela_2026-04-05_001125.png" alt="Galeria de veículos da frota GOULOG" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
-            <div class="absolute inset-0 flex items-end justify-start p-4 bg-gradient-to-t from-goulog-dark/80 via-transparent to-transparent">
-              <div>
-                <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-8 w-auto opacity-90 mb-1"/>
-                <span class="text-gray-300 text-xs">Frota Completa</span>
+        <!-- Second row: front view + tanker rear -->
+        <div class="grid md:grid-cols-2 gap-4">
+          <!-- Front view - Yellow Scania close up -->
+          <div class="gallery-item relative rounded-2xl overflow-hidden group cursor-pointer reveal-left" style="height:300px;" onclick="openLightbox(1)">
+            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/CMunhWKbx5ujyUK5trcuMR/goulog_7.jpeg" alt="Scania R450 GOULOG amarela - vista frontal" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/85 via-goulog-dark/10 to-transparent"></div>
+            <!-- Bottom info bar -->
+            <div class="absolute bottom-0 left-0 right-0 p-5">
+              <div class="flex items-end justify-between">
+                <div>
+                  <div class="text-white font-condensed font-bold text-lg uppercase leading-tight">Vista Frontal</div>
+                  <div class="text-gray-400 text-xs mt-0.5">Scania R450 · Cargas Perigosas</div>
+                </div>
+                <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-8 w-auto opacity-90"/>
               </div>
             </div>
-            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <div class="absolute top-3 right-3 w-9 h-9 rounded-xl bg-black/50 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-white/10">
               <i class="fa-solid fa-expand text-white text-sm"></i>
             </div>
           </div>
-          <div class="md:col-span-2 gallery-item relative rounded-2xl overflow-hidden h-52 group cursor-pointer" onclick="openLightbox(2)">
-            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/euccJGxfQJgMWhyvQjwCqp/ChatGPT_Image_4_de_abr._de_2026,_01_50_21.png" alt="Caminhão GOULOG vermelho frente e traseira tanque" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
-            <div class="absolute inset-0 bg-gradient-to-l from-goulog-dark/40 to-transparent"></div>
-            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+
+          <!-- Tanker rear - Blue GOULOG branding -->
+          <div class="gallery-item relative rounded-2xl overflow-hidden group cursor-pointer reveal-right" style="height:300px;" onclick="openLightbox(2)">
+            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/Dc5kU9THFkyBuj6pw7y8p5/goulog_4.jpeg" alt="Carreta tanque GOULOG inox com identificação - vista traseira" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/85 via-goulog-dark/10 to-transparent"></div>
+            <!-- Bottom info bar -->
+            <div class="absolute bottom-0 left-0 right-0 p-5">
+              <div class="flex items-end justify-between">
+                <div>
+                  <div class="text-white font-condensed font-bold text-lg uppercase leading-tight">Tanque Inox</div>
+                  <div class="text-gray-400 text-xs mt-0.5">Capacidade 22.000L · Granéis Líquidos</div>
+                </div>
+                <span class="bg-blue-600/80 backdrop-blur text-white text-xs font-bold px-2 py-1 rounded-lg border border-blue-400/30">METANOX</span>
+              </div>
+            </div>
+            <div class="absolute top-3 right-3 w-9 h-9 rounded-xl bg-black/50 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-white/10">
               <i class="fa-solid fa-expand text-white text-sm"></i>
+            </div>
+            <!-- Safety badge -->
+            <div class="absolute top-3 left-3">
+              <div class="bg-black/60 backdrop-blur border border-white/10 text-white text-xs font-semibold px-3 py-1.5 rounded-lg flex items-center gap-1.5">
+                <i class="fa-solid fa-shield-halved text-goulog-red"></i> SASSMAQ
+              </div>
             </div>
           </div>
         </div>
@@ -827,46 +842,69 @@
           <p class="text-gray-400 text-base mt-4 max-w-xl mx-auto">Mais de 50 conjuntos próprios prontos para operar em todo o território nacional com segurança e eficiência.</p>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
-          <div class="gallery-item col-span-2 row-span-2 relative rounded-2xl overflow-hidden h-64 md:h-80 group cursor-pointer" onclick="openLightbox(2)">
-            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/euccJGxfQJgMWhyvQjwCqp/ChatGPT_Image_4_de_abr._de_2026,_01_50_21.png" alt="Caminhão tanque GOULOG vermelho frontal e traseiro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/70 via-transparent to-transparent flex items-end p-5">
-              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-10 w-auto opacity-90"/>
+        <!-- Services page gallery - real fleet photos -->
+        <!-- Main hero: side view -->
+        <div class="reveal mb-4">
+          <div class="gallery-item relative rounded-2xl overflow-hidden group cursor-pointer" style="height:380px;" onclick="openLightbox(0)">
+            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/87yt7zsm6raujhhoFJo6Mg/goulog_1.jpeg" alt="Scania R450 GOULOG amarela com carreta tanque inox - vista lateral completa" class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-1000" loading="lazy" style="transition: transform 1s ease;"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark via-goulog-dark/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-goulog-dark/50 via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 p-6 md:p-8">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="bg-goulog-red text-white text-xs font-bold px-3 py-1.5 rounded-lg uppercase tracking-widest">Scania R450</span>
+                <span class="bg-black/50 backdrop-blur text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-white/10">Conjunto Completo</span>
+              </div>
+              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-10 w-auto opacity-95"/>
             </div>
-            <div class="absolute top-3 right-3 w-8 h-8 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <i class="fa-solid fa-expand text-white text-sm"></i>
-            </div>
-            <div class="absolute top-3 left-3"><span class="bg-goulog-red/90 text-white text-xs font-bold px-2 py-1 rounded-lg">Frota Identificada</span></div>
-          </div>
-          <div class="gallery-item relative rounded-2xl overflow-hidden h-32 md:h-38 group cursor-pointer" onclick="openLightbox(0)">
-            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/eQMvnYBDNEd7MKKnRq9Pa7/Carta_de_apresentação_GOULOG_(1)_(1)_(1)_(1)_(1)_p2_0.jpeg" alt="Frota caminhões brancos GOULOG" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/70 to-transparent flex items-end p-2">
-              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-5 w-auto opacity-85"/>
-            </div>
-            <div class="absolute top-2 right-2 w-6 h-6 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <i class="fa-solid fa-expand text-white text-xs"></i>
-            </div>
-          </div>
-          <div class="gallery-item relative rounded-2xl overflow-hidden h-32 md:h-38 group cursor-pointer" onclick="openLightbox(1)">
-            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/DqFoBWCR9pW4dK7WTwEHuh/Modelo_4_-_Logotipo_-_GOULOG_p4_0.png" alt="Caminhão tanque GOULOG cargas químicas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy"/>
-            <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/60 to-transparent flex items-end p-2">
-              <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-5 w-auto opacity-85"/>
-            </div>
-            <div class="absolute top-2 right-2 w-6 h-6 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-              <i class="fa-solid fa-expand text-white text-xs"></i>
-            </div>
-          </div>
-          <div class="gallery-item col-span-2 relative rounded-2xl overflow-hidden h-32 md:h-38 group cursor-pointer" onclick="openLightbox(3)">
-            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/EdZDD9MWvAcqpgCXmbS5Jg/Captura_de_tela_2026-04-05_001125.png" alt="Galeria múltiplos veículos frota GOULOG" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
-            <div class="absolute inset-0 bg-gradient-to-r from-goulog-dark/70 to-transparent flex items-end p-3">
-              <div>
-                <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-6 w-auto opacity-90"/>
+            <div class="absolute top-4 left-4">
+              <div class="bg-goulog-red/90 backdrop-blur text-white text-xs font-bold px-4 py-2 rounded-xl uppercase tracking-wide flex items-center gap-2">
+                <i class="fa-solid fa-truck"></i> 50+ Conjuntos Próprios
               </div>
             </div>
-            <div class="absolute top-2 right-2 w-6 h-6 rounded-full bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <div class="absolute top-4 right-4 w-10 h-10 rounded-xl bg-black/50 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity border border-white/10">
+              <i class="fa-solid fa-expand text-white text-sm"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Two secondary images -->
+        <div class="grid md:grid-cols-2 gap-4">
+          <div class="gallery-item relative rounded-2xl overflow-hidden group cursor-pointer reveal-left" style="height:260px;" onclick="openLightbox(1)">
+            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/CMunhWKbx5ujyUK5trcuMR/goulog_7.jpeg" alt="Scania R450 GOULOG amarela vista frontal direta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/85 via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="text-white font-condensed font-bold text-base uppercase">Vista Frontal</div>
+                  <div class="text-gray-400 text-xs">Scania R450 · Classe 8</div>
+                </div>
+                <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/fyUtBLUJYyMKCgFVP8Jskq/Modelo_4_-_Logotipo_-_GOULOG_p3_0.png" alt="GOULOG" class="h-7 w-auto opacity-90"/>
+              </div>
+            </div>
+            <div class="absolute top-3 right-3 w-8 h-8 rounded-xl bg-black/50 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
               <i class="fa-solid fa-expand text-white text-xs"></i>
             </div>
-            <div class="absolute top-2 left-2"><span class="bg-black/60 text-white text-xs font-bold px-2 py-1 rounded-lg">50+ Veículos</span></div>
+          </div>
+          <div class="gallery-item relative rounded-2xl overflow-hidden group cursor-pointer reveal-right" style="height:260px;" onclick="openLightbox(2)">
+            <img src="https://cdn-ai.onspace.ai/onspace/project/uploads/Dc5kU9THFkyBuj6pw7y8p5/goulog_4.jpeg" alt="Carreta tanque GOULOG inox com identificação de produto perigoso" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy"/>
+            <div class="absolute inset-0 bg-gradient-to-t from-goulog-dark/85 via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="text-white font-condensed font-bold text-base uppercase">Tanque Inox</div>
+                  <div class="text-gray-400 text-xs">22.000L · Corrosivos / Classe 8</div>
+                </div>
+                <span class="bg-blue-600/80 backdrop-blur text-white text-xs font-bold px-2 py-1 rounded-lg">METANOX</span>
+              </div>
+            </div>
+            <div class="absolute top-3 left-3">
+              <div class="bg-black/60 backdrop-blur border border-white/10 text-white text-xs font-semibold px-2.5 py-1 rounded-lg flex items-center gap-1">
+                <i class="fa-solid fa-shield-halved text-goulog-red text-xs"></i> SASSMAQ
+              </div>
+            </div>
+            <div class="absolute top-3 right-3 w-8 h-8 rounded-xl bg-black/50 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <i class="fa-solid fa-expand text-white text-xs"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -1583,10 +1621,9 @@
 
       // ==================== LIGHTBOX ====================
       const galleryImages = [
-        { src: 'https://cdn-ai.onspace.ai/onspace/project/uploads/eQMvnYBDNEd7MKKnRq9Pa7/Carta_de_apresentação_GOULOG_(1)_(1)_(1)_(1)_(1)_p2_0.jpeg', caption: 'Frota GOULOG – 50+ Conjuntos Próprios' },
-        { src: 'https://cdn-ai.onspace.ai/onspace/project/uploads/DqFoBWCR9pW4dK7WTwEHuh/Modelo_4_-_Logotipo_-_GOULOG_p4_0.png', caption: 'Caminhão Tanque GOULOG – Transporte a Granel' },
-        { src: 'https://cdn-ai.onspace.ai/onspace/project/uploads/euccJGxfQJgMWhyvQjwCqp/ChatGPT_Image_4_de_abr._de_2026,_01_50_21.png', caption: 'Caminhão GOULOG – Vista Frontal e Traseira' },
-        { src: 'https://cdn-ai.onspace.ai/onspace/project/uploads/EdZDD9MWvAcqpgCXmbS5Jg/Captura_de_tela_2026-04-05_001125.png', caption: 'Galeria da Frota GOULOG Transportes' },
+        { src: 'https://cdn-ai.onspace.ai/onspace/project/uploads/87yt7zsm6raujhhoFJo6Mg/goulog_1.jpeg', caption: 'Scania R450 GOULOG – Conjunto Completo com Tanque Inox' },
+        { src: 'https://cdn-ai.onspace.ai/onspace/project/uploads/CMunhWKbx5ujyUK5trcuMR/goulog_7.jpeg', caption: 'Scania R450 GOULOG – Vista Frontal · Cargas Perigosas Classe 8' },
+        { src: 'https://cdn-ai.onspace.ai/onspace/project/uploads/Dc5kU9THFkyBuj6pw7y8p5/goulog_4.jpeg', caption: 'Carreta Tanque Inox GOULOG – 22.000L · Transporte de Corrosivos' },
       ];
       let currentIndex = 0;
 
@@ -1648,4 +1685,8 @@
 
 <script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
 
-</body></html>
+<script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
+<script>window.onload=function(){var d=document.createElement("div");d.id="appLoadFinished";document.body.appendChild(d);};</script>
+</body>
+
+</html>
